@@ -33,30 +33,21 @@
   "work": [],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
+      "institution": "Arizona State University",
+      "area": "Ph.D in Computer Science",
       "studyType": "",
       "startDate": "",
-      "endDate": "2018",
+      "endDate": "2030",
       "gpa": null,
       "courses": []
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
+      "institution": "The University of Texas at Austin",
+      "area": "B.S. in Informatics (Human-Centered Data Science)",
       "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
-      "gpa": null,
+      "startDate": "2022",
+      "endDate": "20244",
+      "gpa": 3.94,
       "courses": []
     }
   ],
