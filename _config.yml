@@ -8,8 +8,8 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "default" # Currently available options are "default", "air"
-title                    : " "
+site_theme               : "air" # Currently available options are "default", "air"
+title                    : "            "
 title_separator          : "-"
 name                     : &name "Hsiang Fu"
 description              : &description "Hsiang Fu's Academic Portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
@@ -63,7 +63,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "hsiangfu"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
