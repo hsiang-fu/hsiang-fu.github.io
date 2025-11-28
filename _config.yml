@@ -29,7 +29,7 @@ author:
   bio              : "PhD in Computer Science Student"
   location         : "Tempe, AZ"
   employer         : "Arizona State University"
-  uri              : ""
+  uri              : # URL
   email            : "hsiangfu@asu.edu" 
 
   # Academic websites
