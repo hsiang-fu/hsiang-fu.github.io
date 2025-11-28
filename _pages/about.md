@@ -1,10 +1,29 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "About"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+
+
+---
+Hi, I’m Sean Fu — a researcher focused on the intersection of machine learning, data-driven robotics, and intelligent systems.
+
+I am currently a Ph.D. student in Computer Science at Arizona State University, working in the Interactive Robotics Laboratory under the supervision of Dr. Heni Ben Amor. My research explores how learning-based methods can enable robots to perceive, reason, adapt, and collaborate more effectively in complex, real-world environments. I am particularly interested in developing algorithms that fuse machine learning, human-centered design, and embodied intelligence to create robots that learn from data, interact naturally with people, and make robust decisions in dynamic settings.
+
+Before beginning my doctoral studies, I completed my B.S. in Informatics with a specialization in Human-Centered Data Science at the University of Texas at Austin, where I graduated in December 2024. During my time at UT Austin, I worked on projects spanning reinforcement learning, multimodal systems, human-AI interaction, and applied machine learning. These experiences shaped my interest in building intelligent systems that bridge the gap between algorithmic capability and human-centered design.
+
+Now at ASU, I continue to expand my research in machine learning and robotics, with ongoing work involving:
+	•	Learning from demonstrations and large-scale data
+	•	Human-robot collaboration and interaction
+	•	Reinforcement learning and policy optimization
+	•	Multimodal and generative AI for robotic perception and control
+	•	Intelligent systems that adapt in real time to uncertainty and changing environments
+
+I’m driven by a broader goal: to create intelligent robotic systems that not only perform well technically, but also integrate seamlessly with human needs, workflows, and values. Through my research, I aim to contribute to the next generation of data-driven, adaptive, and socially aware robots.
+
+<!-- 
 ---
 
 This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
@@ -53,4 +72,4 @@ Example: editing a Markdown file for a talk
 
 For more info
 ------
-More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+More info about configuring Academic Pages can be found in [the guide](https://academicpages.github.io/markdown/), the [growing wiki](https://github.com/academicpages/academicpages.github.io/wiki), and you can always [ask a question on GitHub](https://github.com/academicpages/academicpages.github.io/discussions). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful. -->
