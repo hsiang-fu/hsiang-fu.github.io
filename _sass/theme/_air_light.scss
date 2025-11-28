@@ -1,32 +1,36 @@
 /* ==========================================================================
-   Air skin, based on the Minimal Mistakes skin
+   Air skin — Minimalist Grayscale Light Theme (Final)
    ========================================================================== */
 
-/* Color codes used for the theme */
-$primary-color              : #0092ca;
-$dark-primary-color         : mix(#000, $primary-color, 40%);
-$darker-primary-color       : mix(#000, $primary-color, 60%);
-$light-primary-color        : mix(#000, $primary-color, 50%);
+/* Core grayscale palette */
+$primary-color              : #6a6a6a;     // neutral medium gray
+$dark-primary-color         : #3e3e3e;     // strong gray for emphasis
+$darker-primary-color       : #222222;     // near-black for code/text
+$light-primary-color        : #9d9d9d;     // light gray accent
 
-$background                 : #eeeeee;
-$background-light           : mix(#fff, $background, 20%);
-$background-lighter         : mix(#fff, $background, 90%);
-$text                       : #222831;
-$link                       : #393e46;
-$link-dark                  : mix(#000, $link, 25%);
-$link-light                 : mix(#fff, $link, 25%);
-$footer                     : $primary-color;
+/* Backgrounds */
+$background                 : #ffffff;     // pure white
+$background-light           : #f4f4f4;     // subtle gray
+$background-lighter         : #fafafa;     // softer, whiter gray
 
-/* Color codes used for the site */
-$danger-color               : #ee5f5b;
-$info-color                 : #2f7f93;
-$notice-color               : #7a8288;
-$success-color              : #62c462;
-$warning-color              : #f89406;
+/* Text + links (all grayscale) */
+$text                       : #1c1c1c;     // crisp dark charcoal
+$link                       : #444444;     // understated link gray
+$link-dark                  : #2a2a2a;     // darker hover
+$link-light                 : #6d6d6d;     // visited gray
 
-/* Other basic settings for the template */
+$footer                     : #2f2f2f;     // strong contrasting footer gray
+
+/* Accent colors (still grayscale for consistency) */
+$danger-color               : #a94442;     // muted brick gray-red
+$info-color                 : #636f75;     // cool gray
+$notice-color               : #7d7d7d;     // neutral gray
+$success-color              : #5f7a5f;     // muted green-gray
+$warning-color              : #8c7346;     // muted brown-gray
+
+/* Layout settings */
 $border-radius              : 4px;
-$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.08);
 $global-transition          : all 0.2s ease-in-out;
 $masthead-height            : 70px;
 $navicon-width              : 28px;
@@ -34,22 +38,30 @@ $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
-/* Dark theme for the site */
+/* Applied CSS variables for LIGHT THEME */
 :root {
     --global-base-color                 : #{$background};
     --global-bg-color                   : #{$background};
+
     --global-footer-bg-color            : #{$footer};
-    --global-border-color               : #{$light-primary-color};
-    --global-dark-border-color          : #{$background-light};
-    --global-code-background-color      : #fafafa;
+
+    --global-border-color               : #e0e0e0;
+    --global-dark-border-color          : #f0f0f0;
+
+    --global-code-background-color      : #f6f6f6;
     --global-code-text-color            : #{$darker-primary-color};
-    --global-fig-caption-color          : #{$light-primary-color};
+
+    --global-fig-caption-color          : #555555;
+
     --global-link-color                 : #{$link};
     --global-link-color-hover           : #{$link-dark};
     --global-link-color-visited         : #{$link-light};
+
     --global-masthead-link-color        : #{$text};
-    --global-masthead-link-color-hover  : #{$link};
+    --global-masthead-link-color-hover  : #333333;
+
     --global-text-color                 : #{$text};
-    --global-text-color-light           : #{$light-primary-color};
+    --global-text-color-light           : #888888;
+
     --global-thead-color                : #{$background-lighter};
 }
