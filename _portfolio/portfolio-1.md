@@ -1,7 +1,13 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "Introduction to In-Context Learning: For Language, Computer Vision, and Robotics"
+excerpt: "In-Context Learning (ICL) is a machine learning framework where Large Language Models (LLMs) learn new tasks directly from examples and instructions provided in the prompt—without retraining or updating model weights. By interpreting these examples and instructions, the model identifies patterns and applies them to new inputs, enabling flexible, task-agnostic behavior across classification, translation, regression, reasoning, and more. This website introduces the fundamentals of ICL and offers hands-on Google Colab tutorials that showcase its use in regression, reinforcement learning, pattern recognition, and translation.<br><br><img src='/images/portfolio1.gif'>"
 collection: portfolio
 ---
+<p style="text-align:center;">
+  <img src="/images/portfolio1.gif" style="max-height:700px; width:auto;">
+</p>
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+
+In-Context Learning (ICL) is a recent paradigm in the field of machine learning which uses Large Language Models (LLMs) for learning and inference. It was first identified in the paper Large Language Models are Few Shot Learners (Brown et al., 2020). ICL enables LLMs to adjust to new tasks without changing any of their internal weights. Instead of retraining or fine-tuning the LLM, we simply provide instructions and examples directly as part of the prompt context. In turn, the LLM processes these demonstrations, detects the underlying patterns, and applies the identified pattern structure to new input queries. ICL requires no explicit training phase, which allows for incremental and online learning. In addition, the LLM may provide human-readable explanations in natural language which justify its generated output. Most importantly, ICL allows for additional domain information to be provided at inference time as inductive bias. For example, when making predictions about the weather, the model may be provided semantic descriptions of the provided features or may be provided prior information about the specific region that is under investigation. More generally the use of ICL enables a single neural network model to seamlessly shift between tasks, e.g., classification, translation, summarization, or reasoning, based solely on the current context. In this website, we introduce the core ideas behind in-context learning and provide a variety of hands-on examples in regression, reinforcement learning, pattern recognition, and translation. All examples are implemented as Google Colab tutorials and can be run using the free Gemini version.
+
+Access the <a href="https://intro-to-icl.github.io/">website and demos</a> here. 
