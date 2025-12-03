@@ -1,10 +1,10 @@
 ---
 title: "Introduction to In-Context Learning: For Language, Computer Vision, and Robotics"
-excerpt: "In-Context Learning (ICL) is a machine learning framework where Large Language Models (LLMs) learn new tasks directly from examples and instructions provided in the prompt—without retraining or updating model weights. By interpreting these examples and instructions, the model identifies patterns and applies them to new inputs, enabling flexible, task-agnostic behavior across classification, translation, regression, reasoning, and more. This website introduces the fundamentals of ICL and offers hands-on Google Colab tutorials that showcase its use in regression, reinforcement learning, pattern recognition, and translation.<br><br><img src='/images/portfolio1.gif'>"
+excerpt: "In-Context Learning (ICL) is a machine learning framework where Large Language Models (LLMs) learn new tasks directly from examples and instructions provided in the prompt—without retraining or updating model weights. By interpreting these examples and instructions, the model identifies patterns and applies them to new inputs, enabling flexible, task-agnostic behavior across classification, translation, regression, reasoning, and more. This website introduces the fundamentals of ICL and offers hands-on Google Colab tutorials that showcase its use in regression, reinforcement learning, pattern recognition, and translation.<br><br><img src='/images/portfolio-1.gif'>"
 collection: portfolio
 ---
 <p style="text-align:center;">
-  <img src="/images/portfolio1.gif" style="max-height:700px; width:auto;">
+  <img src="/images/portfolio-1.gif" style="max-height:700px; width:auto;">
 </p>
 
 
