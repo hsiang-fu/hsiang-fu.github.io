@@ -8,6 +8,7 @@ redirect_from:
 ---
 
 {% include base_path %}
+<a href = "https://hsiang-fu.github.io/files/Hsiang(Sean)_Fu_CV.pdf">PDF Version</a>
 
 **Education**
 ======
