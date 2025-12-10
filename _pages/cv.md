@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-<a href = "https://hsiang-fu.github.io/files/Hsiang(Sean)_Fu_CV.pdf">PDF Version</a>
+<a href = "https://hsiang-fu.github.io/files/Hsiang(Sean)_Fu_CV.pdf">Download CV (PDF)</a>
 
 **Education**
 ======
