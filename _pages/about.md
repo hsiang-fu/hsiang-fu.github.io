@@ -48,8 +48,8 @@ redirect_from:
 
   <section class="home-section home-section--split" aria-labelledby="about-heading">
     <div>
-      <p class="eyebrow">About</p>
-      <h2 id="about-heading">Research that connects algorithms to people, places, and uncertainty.</h2>
+      <p class="eyebrow">Focus</p>
+      <h2 id="about-heading">What my work focuses on</h2>
     </div>
     <div class="home-prose">
       <p>My work explores how learning-based methods can help robots perceive, reason, adapt, and collaborate in complex environments. I am especially interested in algorithms that fuse machine learning, human-centered design, and embodied intelligence.</p>
