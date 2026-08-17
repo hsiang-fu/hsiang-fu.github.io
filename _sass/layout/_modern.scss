@@ -611,7 +611,6 @@ a:hover {
 #main {
   width: calc(100% - 2rem);
   max-width: 1180px;
-  max-width: none;
   margin-top: 3rem;
   padding-right: 0;
   padding-left: 0;
@@ -725,7 +724,6 @@ a:hover {
 .page__footer footer {
   width: calc(100% - 2rem);
   max-width: 1180px;
-  max-width: none;
 }
 
 @media (min-width: 925px) {
