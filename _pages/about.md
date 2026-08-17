@@ -47,13 +47,6 @@ redirect_from:
           <strong>ASU Interactive Robotics Lab</strong>
         </div>
       </div>
-      <div class="signal-panel" aria-hidden="true">
-        <span class="signal-panel__tag">policy loop</span>
-        <span class="signal-panel__line"></span>
-        <span class="signal-panel__dot"></span>
-        <span class="signal-panel__dot"></span>
-        <span class="signal-panel__dot"></span>
-      </div>
     </div>
   </section>
 
@@ -70,8 +63,7 @@ redirect_from:
 
   <section class="news-highlights" aria-labelledby="news-heading">
     <div class="section-kicker">
-      <p class="eyebrow">News + Highlights</p>
-      <h2 id="news-heading">Recent signals from the work.</h2>
+      <h2 id="news-heading">News + Highlights</h2>
     </div>
     <div class="news-grid">
       <article>
@@ -136,23 +128,6 @@ redirect_from:
         <h3>Multimodal Robot AI</h3>
         <p>Using generative and multimodal models for perception, control, and real-time adaptation.</p>
       </article>
-    </div>
-  </section>
-
-  <section class="systems-board" aria-labelledby="systems-heading">
-    <div>
-      <p class="eyebrow">Systems View</p>
-      <h2 id="systems-heading">How the pieces connect</h2>
-    </div>
-    <div class="systems-map" aria-label="Research system map">
-      <span style="--x: 8%; --y: 18%;">Data</span>
-      <span style="--x: 42%; --y: 8%;">Perception</span>
-      <span style="--x: 72%; --y: 28%;">Policy</span>
-      <span style="--x: 18%; --y: 68%;">Human Intent</span>
-      <span style="--x: 58%; --y: 72%;">Adaptation</span>
-      <div class="systems-map__path systems-map__path--one"></div>
-      <div class="systems-map__path systems-map__path--two"></div>
-      <div class="systems-map__path systems-map__path--three"></div>
     </div>
   </section>
 
