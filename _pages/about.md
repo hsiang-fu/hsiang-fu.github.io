@@ -16,15 +16,15 @@ redirect_from:
       <dl class="profile-facts" aria-label="Profile details">
         <div>
           <dt>Role</dt>
-          <dd>Ph.D. Student, Computer Science</dd>
+          <dd>Computer Science Ph.D. Student</dd>
         </div>
         <div>
           <dt>Lab</dt>
-          <dd>ASU Interactive Robotics Laboratory</dd>
+          <dd>Interactive Robotics Laboratory @ ASU</dd>
         </div>
         <div>
           <dt>Research areas</dt>
-          <dd>Robotics, reinforcement learning, embodied AI, human-centered machine learning</dd>
+          <dd>Robotics, In-Context Learning, Reward Models, Agentic AI, Reinforcement Learning</dd>
         </div>
       </dl>
       <div class="profile-tags" aria-label="Research interests">
