@@ -1678,3 +1678,36 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   Pressed interaction feedback
+   ========================================================================== */
+
+.btn,
+.theme-toggle,
+.archive-intro a,
+.greedy-nav .visible-links a:not(.site-mark):not(.theme-toggle),
+.console-card__controls button {
+  will-change: transform;
+}
+
+.btn:active,
+.archive-intro a:active,
+.console-card__controls button:active {
+  box-shadow: none;
+  transform: translateY(1px) scale(0.985);
+}
+
+.theme-toggle:active,
+.greedy-nav .visible-links a:not(.site-mark):not(.theme-toggle):active {
+  transform: translateY(1px) scale(0.96);
+}
+
+.btn--primary:active {
+  filter: saturate(1.08) brightness(0.96);
+}
+
+.btn--ghost:active,
+.archive-intro a:active {
+  background: var(--site-accent-wash);
+}
