@@ -1995,6 +1995,38 @@ body {
 }
 
 /* ==========================================================================
+   Archive entry spacing
+   ========================================================================== */
+
+.archive .list__item {
+  margin: 0 0 0.9rem;
+  padding-right: 0;
+}
+
+.archive .list__item > .archive__item {
+  display: flex;
+  min-height: 0 !important;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: clamp(1rem, 1.7vw, 1.35rem) !important;
+}
+
+.archive .archive__item > *:first-child,
+.archive .archive__item-title {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+.archive .archive__item-title {
+  margin-bottom: 0.7rem;
+}
+
+.archive .archive__item-excerpt,
+.archive .archive__item-excerpt > p:first-child {
+  margin-top: 0.75rem;
+}
+
+/* ==========================================================================
    Footer removal
    ========================================================================== */
 
