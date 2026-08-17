@@ -1551,8 +1551,7 @@ body {
 }
 
 .archive__item > p:not(.archive__item-excerpt):first-of-type {
-  display: inline-flex;
-  flex-wrap: wrap;
+  display: inline-block;
   width: fit-content;
   max-width: 100%;
   padding: 0.34rem 0.58rem;
@@ -1778,8 +1777,7 @@ body {
 .detail-meta,
 .page--detail .page__date,
 .page--detail .page__meta {
-  display: inline-flex;
-  flex-wrap: wrap;
+  display: inline-block;
   width: fit-content;
   max-width: 100%;
   margin: 0.3rem 0 0;
