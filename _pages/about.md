@@ -42,10 +42,6 @@ redirect_from:
     <div class="home-hero__visual" aria-label="Portrait and research focus">
       <div class="portrait-card">
         <img src="/images/sean-desert.jpg" alt="Hsiang Fu standing in a bright desert landscape" fetchpriority="high">
-        <div class="portrait-card__caption">
-          <span>Hsiang “Sean” Fu</span>
-          <strong>ASU Interactive Robotics Lab</strong>
-        </div>
       </div>
     </div>
   </section>
@@ -132,7 +128,7 @@ redirect_from:
   </section>
 
   <section class="home-section home-section--timeline" aria-labelledby="path-heading">
-    <p class="eyebrow">Trajectory</p>
+    <p class="eyebrow">Academic Path</p>
     <h2 id="path-heading">A short path through the work</h2>
     <div class="timeline">
       <article>

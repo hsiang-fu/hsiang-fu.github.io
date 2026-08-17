@@ -262,35 +262,6 @@ a:hover {
   filter: saturate(1.02) contrast(1.02);
 }
 
-.portrait-card__caption {
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-  left: 1rem;
-  z-index: 2;
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 1rem;
-  color: #ffffff;
-}
-
-.portrait-card__caption span,
-.portrait-card__caption strong {
-  display: block;
-}
-
-.portrait-card__caption span {
-  font-weight: 900;
-}
-
-.portrait-card__caption strong {
-  max-width: 12rem;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 0.78rem;
-  text-align: right;
-}
-
 .home-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -610,9 +581,9 @@ a:hover {
   border-radius: 14px;
   border-color: var(--site-hairline);
   box-shadow: var(--site-shadow-soft);
-  aspect-ratio: 1 / 1.16;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
-  object-position: 50% 72%;
+  object-position: 50% 70%;
 }
 
 .author__name {
@@ -663,6 +634,14 @@ a:hover {
   .sidebar + .archive {
     margin-left: 280px;
     margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    top: 7.75rem;
+    height: calc(100vh - 9rem);
+    padding: 1rem;
   }
 }
 
@@ -913,12 +892,6 @@ body {
   object-position: 50% 68%;
 }
 
-.portrait-card__caption {
-  right: 1.1rem;
-  bottom: 1.1rem;
-  left: 1.1rem;
-}
-
 .home-strip {
   grid-template-columns: 1.1fr 1.2fr 1fr;
   margin-top: 1rem;
@@ -954,10 +927,6 @@ body {
 
 .focus-grid article {
   min-height: 17rem;
-}
-
-.systems-map {
-  min-height: 28rem;
 }
 
 #main {
@@ -1162,13 +1131,21 @@ body {
 }
 
 .portrait-card {
-  height: 350px;
+  width: min(320px, 100%);
+  height: auto;
+  aspect-ratio: 3 / 4;
   min-height: 0;
   border-radius: 22px;
   transform: none;
 }
 
+.portrait-card::before {
+  display: none;
+}
+
 .portrait-card img {
+  height: 100%;
+  aspect-ratio: auto;
   object-position: 50% 70%;
 }
 
@@ -1417,8 +1394,8 @@ body {
   }
 
   .portrait-card img {
-    height: auto;
-    aspect-ratio: 4 / 3;
+    height: 100%;
+    aspect-ratio: auto;
   }
 }
 
