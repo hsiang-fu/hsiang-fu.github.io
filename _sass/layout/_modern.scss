@@ -1872,3 +1872,15 @@ body {
 .page--detail footer.page__meta {
   display: none;
 }
+
+/* ==========================================================================
+   Footer removal
+   ========================================================================== */
+
+body {
+  margin-bottom: 0 !important;
+}
+
+.page__footer {
+  display: none !important;
+}
