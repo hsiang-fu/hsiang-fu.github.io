@@ -1238,6 +1238,25 @@ body {
   font-size: clamp(1.65rem, 3vw, 2.45rem);
 }
 
+.current-work {
+  grid-template-columns: minmax(220px, 0.62fr) minmax(0, 1.38fr);
+  align-items: start;
+}
+
+.current-work__stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.current-work__grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.current-work__grid article {
+  min-height: 11.5rem;
+}
+
 .console-card__screen {
   min-height: 14rem;
 }
@@ -1384,6 +1403,10 @@ body {
   .home-section--split,
   .news-grid,
   .lab-console {
+    grid-template-columns: 1fr;
+  }
+
+  .current-work__grid {
     grid-template-columns: 1fr;
   }
 
@@ -1834,6 +1857,7 @@ body {
   margin: 0 0 1.4rem;
 }
 
+.page--detail .page__content .detail-citation,
 .page--detail .page__content p[style*="font-size"] {
   padding: 1rem;
   border: 1px solid var(--site-hairline);
@@ -1842,12 +1866,22 @@ body {
   font-size: 0.9rem !important;
 }
 
-.page--detail .page__content p[style*="font-size"] a,
-.page--detail .page__content > p:last-child a {
+.page--detail .page__content .detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.page--detail .page__content .detail-citation a,
+.page--detail .page__content .detail-actions a,
+.page--detail .page__content p[style*="font-size"] a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 0.4rem 0.4rem 0 0;
   padding: 0.55rem 0.76rem;
   border: 1px solid var(--site-hairline);
   border-radius: 999px;
@@ -1857,14 +1891,21 @@ body {
   transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease;
 }
 
-.page--detail .page__content p[style*="font-size"] a:hover,
-.page--detail .page__content > p:last-child a:hover {
+.page--detail .page__content .detail-citation a,
+.page--detail .page__content p[style*="font-size"] a {
+  margin: 0.4rem 0.4rem 0 0;
+}
+
+.page--detail .page__content .detail-citation a:hover,
+.page--detail .page__content .detail-actions a:hover,
+.page--detail .page__content p[style*="font-size"] a:hover {
   filter: saturate(1.08);
   transform: translateY(-1px);
 }
 
-.page--detail .page__content p[style*="font-size"] a:active,
-.page--detail .page__content > p:last-child a:active {
+.page--detail .page__content .detail-citation a:active,
+.page--detail .page__content .detail-actions a:active,
+.page--detail .page__content p[style*="font-size"] a:active {
   box-shadow: none;
   transform: translateY(1px) scale(0.985);
 }

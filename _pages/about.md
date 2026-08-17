@@ -80,50 +80,48 @@ redirect_from:
     </div>
   </section>
 
-  <section class="lab-console" aria-labelledby="console-heading">
+  <section class="lab-console current-work" aria-labelledby="current-work-heading">
     <div class="lab-console__copy">
-      <p class="eyebrow">Interactive Research Console</p>
-      <h2 id="console-heading">Choose a research lens.</h2>
-      <p>Select a topic and the portfolio reframes the work around the problem, method, and intended impact.</p>
+      <p class="eyebrow">Current Work</p>
+      <h2 id="current-work-heading">What I’m currently working on.</h2>
+      <p>I’m focusing on learning-driven robotics systems that can adapt from examples, respond to human intent, and stay useful in messy real-world settings.</p>
     </div>
-    <div class="console-card" data-console>
-      <div class="console-card__screen" aria-live="polite">
-        <span class="console-card__label" data-console-label>Embodied Learning</span>
-        <h3 data-console-title>Learning policies from demonstration-rich data</h3>
-        <p data-console-body>Robots should turn examples into behavior that survives contact with noisy environments, incomplete instructions, and changing human goals.</p>
+    <div class="current-work__stack">
+      <div class="console-card" data-console>
+        <div class="console-card__screen" aria-live="polite">
+          <span class="console-card__label" data-console-label>Embodied Learning</span>
+          <h3 data-console-title>Learning policies from demonstration-rich data</h3>
+          <p data-console-body>Robots should turn examples into behavior that survives contact with noisy environments, incomplete instructions, and changing human goals.</p>
+        </div>
+        <div class="console-card__controls" role="group" aria-label="Research topic selector">
+          <button type="button" class="is-active" data-console-topic="embodied">Embodied Learning</button>
+          <button type="button" data-console-topic="collab">Collaboration</button>
+          <button type="button" data-console-topic="multimodal">Multimodal AI</button>
+        </div>
       </div>
-      <div class="console-card__controls" role="group" aria-label="Research topic selector">
-        <button type="button" class="is-active" data-console-topic="embodied">Embodied Learning</button>
-        <button type="button" data-console-topic="collab">Collaboration</button>
-        <button type="button" data-console-topic="multimodal">Multimodal AI</button>
-      </div>
-    </div>
-  </section>
 
-  <section class="home-section" aria-labelledby="research-heading">
-    <p class="eyebrow">Research Directions</p>
-    <h2 id="research-heading">Questions I keep returning to</h2>
-    <div class="focus-grid">
-      <article>
-        <i class="fa-solid fa-route" aria-hidden="true"></i>
-        <h3>Learning from Demonstrations</h3>
-        <p>Turning examples and large-scale data into policies that transfer beyond scripted settings.</p>
-      </article>
-      <article>
-        <i class="fa-solid fa-handshake-angle" aria-hidden="true"></i>
-        <h3>Human-Robot Collaboration</h3>
-        <p>Designing interaction loops where robots can adapt to people, intent, and context.</p>
-      </article>
-      <article>
-        <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
-        <h3>Policy Optimization</h3>
-        <p>Studying reinforcement learning and decision-making under noisy, changing constraints.</p>
-      </article>
-      <article>
-        <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
-        <h3>Multimodal Robot AI</h3>
-        <p>Using generative and multimodal models for perception, control, and real-time adaptation.</p>
-      </article>
+      <div class="focus-grid current-work__grid">
+        <article>
+          <i class="fa-solid fa-route" aria-hidden="true"></i>
+          <h3>Learning from Demonstrations</h3>
+          <p>Turning examples and large-scale data into policies that transfer beyond scripted settings.</p>
+        </article>
+        <article>
+          <i class="fa-solid fa-handshake-angle" aria-hidden="true"></i>
+          <h3>Human-Robot Collaboration</h3>
+          <p>Designing interaction loops where robots can adapt to people, intent, and context.</p>
+        </article>
+        <article>
+          <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+          <h3>Policy Optimization</h3>
+          <p>Studying reinforcement learning and decision-making under noisy, changing constraints.</p>
+        </article>
+        <article>
+          <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+          <h3>Multimodal Robot AI</h3>
+          <p>Using generative and multimodal models for perception, control, and real-time adaptation.</p>
+        </article>
+      </div>
     </div>
   </section>
 
