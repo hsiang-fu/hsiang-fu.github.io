@@ -735,7 +735,7 @@ body {
   left: 50%;
   width: min(1120px, calc(100% - 2rem));
   border: 1px solid var(--site-hairline);
-  border-radius: 999px;
+  border-radius: 22px;
   background: var(--site-nav-bg);
   box-shadow: var(--site-shadow-soft);
   transform: translateX(-50%);
@@ -747,7 +747,7 @@ body {
 
 .masthead__inner-wrap {
   max-width: none;
-  padding: 0.42rem 0.65rem;
+  padding: 0.36rem 0.62rem;
 }
 
 .greedy-nav {
@@ -792,7 +792,7 @@ body {
 .greedy-nav a.theme-toggle {
   width: 2.45rem;
   height: 2.45rem;
-  border-radius: 14px;
+  border-radius: 12px;
 }
 
 .home {
@@ -1552,7 +1552,7 @@ body {
 
 .greedy-nav .visible-links a:not(.site-mark):not(.theme-toggle) {
   padding: 0.5rem 0.72rem;
-  border-radius: 999px;
+  border-radius: 12px;
 }
 
 .greedy-nav .visible-links a:not(.site-mark):not(.theme-toggle):hover {
