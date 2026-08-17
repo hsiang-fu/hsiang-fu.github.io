@@ -1,26 +1,26 @@
 /* ==========================================================================
-   Dark skin — Minimalist Grayscale Dark Theme
+   Air skin - Kinetic dark theme
    ========================================================================== */
 
 /* Core grayscale palette */
-$primary-color              : #888888;    // neutral mid-gray accent
-$dark-primary-color         : #5c5c5c;    // darker gray
-$darker-primary-color       : #2a2a2a;    // very dark gray (almost black)
-$light-primary-color        : #b5b5b5;    // light gray accent
+$primary-color              : #22d3ee;
+$dark-primary-color         : #0891b2;
+$darker-primary-color       : #07111f;
+$light-primary-color        : #fbbf24;
 
 /* Backgrounds */
-$background                 : #1c1c1c;    // main dark background
-$background-light           : #2a2a2a;    // slightly lighter gray
-$background-lighter         : #3a3a3a;    // UI light surfaces
+$background                 : #07111f;
+$background-light           : #0d1b2f;
+$background-lighter         : #13243b;
 
 /* Text + links (all grayscale) */
-$text                       : #e5e5e5;    // soft white
-$link                       : #c0c0c0;    // light gray link
-$link-dark                  : #e0e0e0;    // hovered brighter
-$link-light                 : #9a9a9a;    // visited darker
+$text                       : #edf7ff;
+$link                       : #7dd3fc;
+$link-dark                  : #fde68a;
+$link-light                 : #c5d7e7;
 
 /* Footer */
-$footer                     : #141414;    // grounded very dark gray
+$footer                     : #050a13;
 
 /* Accent colors (kept but in muted grayscale spirit) */
 $danger-color               : #cc5552;
@@ -45,10 +45,10 @@ html[data-theme="dark"] {
     --global-bg-color                   : #{$background};
     --global-footer-bg-color            : #{$footer};
 
-    --global-border-color               : #{$background-light};
-    --global-dark-border-color          : #{$background-lighter};
+    --global-border-color               : rgba(237, 247, 255, 0.14);
+    --global-dark-border-color          : rgba(237, 247, 255, 0.18);
 
-    --global-code-background-color      : #2a2a2a;
+    --global-code-background-color      : #101c2f;
     --global-code-text-color            : #{$text};
 
     --global-fig-caption-color          : #{$light-primary-color};
@@ -58,10 +58,32 @@ html[data-theme="dark"] {
     --global-link-color-visited         : #{$link-light};
 
     --global-masthead-link-color        : #{$text};
-    --global-masthead-link-color-hover  : #dedede;
+    --global-masthead-link-color-hover  : #{$link-dark};
 
     --global-text-color                 : #{$text};
-    --global-text-color-light           : #{$light-primary-color};
+    --global-text-color-light           : #a8bbcf;
 
     --global-thead-color                : #{$background-lighter};
+
+    --site-heading-color                : #f8fbff;
+    --site-surface                      : rgba(13, 27, 47, 0.82);
+    --site-surface-solid                : #0d1b2f;
+    --site-accent                       : #22d3ee;
+    --site-accent-2                     : #f59e0b;
+    --site-accent-strong                : #67e8f9;
+    --site-on-accent                    : #07111f;
+    --site-hairline                     : rgba(237, 247, 255, 0.15);
+    --site-nav-bg                       : rgba(7, 17, 31, 0.88);
+    --site-panel-bg                     : rgba(13, 27, 47, 0.9);
+    --site-node-bg                      : rgba(13, 27, 47, 0.84);
+    --site-accent-wash                  : rgba(34, 211, 238, 0.1);
+    --site-accent-wash-strong           : rgba(34, 211, 238, 0.16);
+    --site-accent-border                : rgba(34, 211, 238, 0.44);
+    --site-link-underline               : rgba(125, 211, 252, 0.45);
+    --site-grid-color                   : rgba(125, 211, 252, 0.08);
+    --site-wash-a                       : rgba(34, 211, 238, 0.13);
+    --site-wash-b                       : rgba(245, 158, 11, 0.12);
+    --site-shadow-soft                  : 0 18px 60px rgba(0, 0, 0, 0.26);
+    --site-shadow-strong                : 0 38px 110px rgba(0, 0, 0, 0.44);
+    --site-shadow-color                 : 0 20px 52px rgba(34, 211, 238, 0.20);
 }
