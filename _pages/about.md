@@ -46,11 +46,8 @@ redirect_from:
     </div>
   </section>
 
-  <section class="home-section home-section--split" aria-labelledby="about-heading">
-    <div>
-      <p class="eyebrow">Focus</p>
-      <h2 id="about-heading">What my work focuses on</h2>
-    </div>
+  <section class="home-section home-section--plain" aria-labelledby="about-heading">
+    <h2 id="about-heading">What my work focuses on</h2>
     <div class="home-prose">
       <p>My work explores how learning-based methods can help robots perceive, reason, adapt, and collaborate in complex environments. I am especially interested in algorithms that fuse machine learning, human-centered design, and embodied intelligence.</p>
       <p>Before ASU, I completed a B.S. in Informatics with a specialization in Human-Centered Data Science at the University of Texas at Austin. Projects in reinforcement learning, multimodal systems, human-AI interaction, and applied machine learning shaped the way I think about useful intelligent systems.</p>
@@ -82,8 +79,7 @@ redirect_from:
 
   <section class="lab-console current-work" aria-labelledby="current-work-heading">
     <div class="lab-console__copy">
-      <p class="eyebrow">Current Work</p>
-      <h2 id="current-work-heading">What I’m currently working on.</h2>
+      <h2 id="current-work-heading">What I'm currently working on</h2>
       <p>I’m focusing on learning-driven robotics systems that can adapt from examples, respond to human intent, and stay useful in messy real-world settings.</p>
     </div>
     <div class="current-work__stack">
@@ -126,8 +122,7 @@ redirect_from:
   </section>
 
   <section class="home-section home-section--timeline" aria-labelledby="path-heading">
-    <p class="eyebrow">Academic Path</p>
-    <h2 id="path-heading">A short path through the work</h2>
+    <h2 id="path-heading">Academic Timeline</h2>
     <div class="timeline">
       <article>
         <span>2025 - Present</span>
