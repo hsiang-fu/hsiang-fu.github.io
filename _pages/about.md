@@ -10,7 +10,7 @@ redirect_from:
 <main class="home">
   <section class="home-hero" aria-labelledby="home-title">
     <div class="home-hero__copy">
-      <p class="eyebrow">Academic Profile</p>
+      <p class="eyebrow">About Me</p>
       <h1 id="home-title">Hsiang “Sean” Fu</h1>
       <p class="home-hero__lead">Computer Science Ph.D. student at Arizona State University, building learning-driven robotics systems that perceive, adapt, and collaborate in real-world environments.</p>
       <dl class="profile-facts" aria-label="Profile details">
