@@ -10,18 +10,32 @@ redirect_from:
 <main class="home">
   <section class="home-hero" aria-labelledby="home-title">
     <div class="home-hero__copy">
-      <p class="eyebrow">Research OS / Robotics Lab</p>
-      <h1 id="home-title">Learning-driven robots for messy real-world data.</h1>
-      <p class="home-hero__lead">Hi, I’m Sean Fu, a Computer Science Ph.D. student at Arizona State University building systems that perceive, adapt, and collaborate in human environments.</p>
+      <p class="eyebrow">Academic Profile</p>
+      <h1 id="home-title">Hsiang “Sean” Fu</h1>
+      <p class="home-hero__lead">Computer Science Ph.D. student at Arizona State University, building learning-driven robotics systems that perceive, adapt, and collaborate in real-world environments.</p>
+      <dl class="profile-facts" aria-label="Profile details">
+        <div>
+          <dt>Role</dt>
+          <dd>Ph.D. Student, Computer Science</dd>
+        </div>
+        <div>
+          <dt>Lab</dt>
+          <dd>ASU Interactive Robotics Laboratory</dd>
+        </div>
+        <div>
+          <dt>Research areas</dt>
+          <dd>Robotics, reinforcement learning, embodied AI, human-centered machine learning</dd>
+        </div>
+      </dl>
+      <div class="profile-tags" aria-label="Research interests">
+        <span>Robot Learning</span>
+        <span>Human-Robot Collaboration</span>
+        <span>Multimodal AI</span>
+      </div>
       <div class="home-actions" aria-label="Primary links">
         <a class="btn btn--primary" href="/publications/">View publications</a>
         <a class="btn btn--ghost" href="/projects/">Explore projects</a>
         <a class="btn btn--ghost" href="mailto:hsiangfu@asu.edu">Contact</a>
-      </div>
-      <div class="hero-command" aria-label="Current research status">
-        <span>mode: adaptive_policy</span>
-        <span>signal: human_intent</span>
-        <span>status: exploring</span>
       </div>
     </div>
 
@@ -43,18 +57,38 @@ redirect_from:
     </div>
   </section>
 
-  <section class="home-strip" aria-label="Research snapshot">
+  <section class="home-section home-section--split" aria-labelledby="about-heading">
     <div>
-      <span>Current role</span>
-      <strong>Ph.D. Student, Computer Science</strong>
+      <p class="eyebrow">About</p>
+      <h2 id="about-heading">Research that connects algorithms to people, places, and uncertainty.</h2>
     </div>
-    <div>
-      <span>Lab</span>
-      <strong>Interactive Robotics Laboratory</strong>
+    <div class="home-prose">
+      <p>My work explores how learning-based methods can help robots perceive, reason, adapt, and collaborate in complex environments. I am especially interested in algorithms that fuse machine learning, human-centered design, and embodied intelligence.</p>
+      <p>Before ASU, I completed a B.S. in Informatics with a specialization in Human-Centered Data Science at the University of Texas at Austin. Projects in reinforcement learning, multimodal systems, human-AI interaction, and applied machine learning shaped the way I think about useful intelligent systems.</p>
     </div>
-    <div>
-      <span>Focus</span>
-      <strong>Adaptive embodied intelligence</strong>
+  </section>
+
+  <section class="news-highlights" aria-labelledby="news-heading">
+    <div class="section-kicker">
+      <p class="eyebrow">News + Highlights</p>
+      <h2 id="news-heading">Recent signals from the work.</h2>
+    </div>
+    <div class="news-grid">
+      <article>
+        <span>2025 - Present</span>
+        <h3>Joined ASU Interactive Robotics Lab</h3>
+        <p>Beginning doctoral research on robot learning, in-context adaptation, reinforcement learning, and embodied AI systems.</p>
+      </article>
+      <article>
+        <span>Research Focus</span>
+        <h3>Learning from messy real-world data</h3>
+        <p>Exploring methods that help robots generalize from demonstrations, multimodal context, and changing human goals.</p>
+      </article>
+      <article>
+        <span>Selected Pages</span>
+        <h3>Publications and projects are live</h3>
+        <p>Browse recent research outputs, applied machine learning systems, robotics experiments, and project notes.</p>
+      </article>
     </div>
   </section>
 
@@ -62,7 +96,7 @@ redirect_from:
     <div class="lab-console__copy">
       <p class="eyebrow">Interactive Research Console</p>
       <h2 id="console-heading">Choose a research lens.</h2>
-      <p>The site includes a small exploratory console: select a topic and the portfolio reframes the work around the problem, method, and intended impact.</p>
+      <p>Select a topic and the portfolio reframes the work around the problem, method, and intended impact.</p>
     </div>
     <div class="console-card" data-console>
       <div class="console-card__screen" aria-live="polite">
@@ -75,17 +109,6 @@ redirect_from:
         <button type="button" data-console-topic="collab">Collaboration</button>
         <button type="button" data-console-topic="multimodal">Multimodal AI</button>
       </div>
-    </div>
-  </section>
-
-  <section class="home-section home-section--split" aria-labelledby="about-heading">
-    <div>
-      <p class="eyebrow">About</p>
-      <h2 id="about-heading">Research that connects algorithms to people, places, and uncertainty.</h2>
-    </div>
-    <div class="home-prose">
-      <p>My work explores how learning-based methods can help robots perceive, reason, adapt, and collaborate in complex environments. I am especially interested in algorithms that fuse machine learning, human-centered design, and embodied intelligence.</p>
-      <p>Before ASU, I completed a B.S. in Informatics with a specialization in Human-Centered Data Science at the University of Texas at Austin. Projects in reinforcement learning, multimodal systems, human-AI interaction, and applied machine learning shaped the way I think about useful intelligent systems.</p>
     </div>
   </section>
 
