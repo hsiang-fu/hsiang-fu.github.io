@@ -10,19 +10,24 @@ redirect_from:
 <main class="home">
   <section class="home-hero" aria-labelledby="home-title">
     <div class="home-hero__copy">
-      <p class="eyebrow">Machine Learning · Robotics · Human-Centered AI</p>
-      <h1 id="home-title">I build learning-driven robots that can adapt, collaborate, and make sense of messy real-world data.</h1>
-      <p class="home-hero__lead">Hi, I’m Sean Fu, a Computer Science Ph.D. student at Arizona State University in the Interactive Robotics Laboratory, advised by Dr. Heni Ben Amor.</p>
+      <p class="eyebrow">Research OS / Robotics Lab</p>
+      <h1 id="home-title">Learning-driven robots for messy real-world data.</h1>
+      <p class="home-hero__lead">Hi, I’m Sean Fu, a Computer Science Ph.D. student at Arizona State University building systems that perceive, adapt, and collaborate in human environments.</p>
       <div class="home-actions" aria-label="Primary links">
         <a class="btn btn--primary" href="/publications/">View publications</a>
         <a class="btn btn--ghost" href="/projects/">Explore projects</a>
         <a class="btn btn--ghost" href="mailto:hsiangfu@asu.edu">Contact</a>
       </div>
+      <div class="hero-command" aria-label="Current research status">
+        <span>mode: adaptive_policy</span>
+        <span>signal: human_intent</span>
+        <span>status: exploring</span>
+      </div>
     </div>
 
     <div class="home-hero__visual" aria-label="Portrait and research focus">
       <div class="portrait-card">
-        <img src="/images/profile.jpg" alt="Portrait of Hsiang Fu" fetchpriority="high">
+        <img src="/images/sean-desert.jpg" alt="Hsiang Fu standing in a bright desert landscape" fetchpriority="high">
         <div class="portrait-card__caption">
           <span>Hsiang “Sean” Fu</span>
           <strong>ASU Interactive Robotics Lab</strong>

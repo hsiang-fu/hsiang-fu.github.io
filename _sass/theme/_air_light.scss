@@ -9,9 +9,9 @@ $darker-primary-color       : #111827;
 $light-primary-color        : #38bdf8;
 
 /* Backgrounds */
-$background                 : #f7f4ec;
+$background                 : #f3f8fb;
 $background-light           : #ffffff;
-$background-lighter         : #eef7f6;
+$background-lighter         : #eaf5fb;
 
 /* Text + links (all grayscale) */
 $text                       : #172033;
@@ -26,7 +26,7 @@ $danger-color               : #a94442;     // muted brick gray-red
 $info-color                 : #636f75;     // cool gray
 $notice-color               : #7d7d7d;     // neutral gray
 $success-color              : #5f7a5f;     // muted green-gray
-$warning-color              : #8c7346;     // muted brown-gray
+$warning-color              : #4f6fa8;
 
 /* Layout settings */
 $border-radius              : 4px;
@@ -48,7 +48,7 @@ $sidebar-screen-min-width   : 1024px;
     --global-border-color               : #d9d6cb;
     --global-dark-border-color          : #243045;
 
-    --global-code-background-color      : #fffaf0;
+    --global-code-background-color      : #edf7ff;
     --global-code-text-color            : #{$darker-primary-color};
 
     --global-fig-caption-color          : #667085;
@@ -69,11 +69,11 @@ $sidebar-screen-min-width   : 1024px;
     --site-surface                      : rgba(255, 255, 255, 0.78);
     --site-surface-solid                : #ffffff;
     --site-accent                       : #0ea5a4;
-    --site-accent-2                     : #f97316;
+    --site-accent-2                     : #2563eb;
     --site-accent-strong                : #0f766e;
     --site-on-accent                    : #ffffff;
     --site-hairline                     : rgba(23, 32, 51, 0.14);
-    --site-nav-bg                       : rgba(247, 244, 236, 0.86);
+    --site-nav-bg                       : rgba(243, 248, 251, 0.86);
     --site-panel-bg                     : rgba(255, 255, 255, 0.9);
     --site-node-bg                      : rgba(255, 255, 255, 0.84);
     --site-accent-wash                  : rgba(14, 165, 164, 0.1);
@@ -82,8 +82,13 @@ $sidebar-screen-min-width   : 1024px;
     --site-link-underline               : rgba(18, 102, 168, 0.4);
     --site-grid-color                   : rgba(15, 118, 110, 0.08);
     --site-wash-a                       : rgba(14, 165, 164, 0.20);
-    --site-wash-b                       : rgba(249, 115, 22, 0.18);
+    --site-wash-b                       : rgba(37, 99, 235, 0.16);
     --site-shadow-soft                  : 0 16px 50px rgba(23, 32, 51, 0.08);
     --site-shadow-strong                : 0 34px 90px rgba(23, 32, 51, 0.18);
-    --site-shadow-color                 : 0 18px 42px rgba(14, 165, 164, 0.22);
+    --site-shadow-color                 : 0 18px 42px rgba(37, 99, 235, 0.18);
+    --site-wash-c                       : rgba(99, 102, 241, 0.11);
+    --site-hero-a                       : rgba(14, 165, 233, 0.18);
+    --site-hero-b                       : rgba(79, 70, 229, 0.16);
+    --site-scanline                     : rgba(14, 165, 233, 0.14);
+    --site-button-bg                    : rgba(255, 255, 255, 0.62);
 }

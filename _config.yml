@@ -23,7 +23,7 @@ repository               : "hsiang-fu/hsiang-fu.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.jpg"
+  avatar           : "sean-desert.jpg"
   name             : "Hsiang Fu (Sean)"
   pronouns         : ""
   bio              : "Ph.D. student building learning-driven robotic systems"

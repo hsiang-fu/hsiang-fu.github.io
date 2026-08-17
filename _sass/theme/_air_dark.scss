@@ -6,7 +6,7 @@
 $primary-color              : #22d3ee;
 $dark-primary-color         : #0891b2;
 $darker-primary-color       : #07111f;
-$light-primary-color        : #fbbf24;
+$light-primary-color        : #a5b4fc;
 
 /* Backgrounds */
 $background                 : #07111f;
@@ -16,7 +16,7 @@ $background-lighter         : #13243b;
 /* Text + links (all grayscale) */
 $text                       : #edf7ff;
 $link                       : #7dd3fc;
-$link-dark                  : #fde68a;
+$link-dark                  : #c4b5fd;
 $link-light                 : #c5d7e7;
 
 /* Footer */
@@ -27,7 +27,7 @@ $danger-color               : #cc5552;
 $info-color                 : #7d8a90;
 $notice-color               : #8a8a8a;
 $success-color              : #7da87d;
-$warning-color              : #b39255;
+$warning-color              : #8b9cf6;
 
 /* Layout settings */
 $border-radius              : 4px;
@@ -69,7 +69,7 @@ html[data-theme="dark"] {
     --site-surface                      : rgba(13, 27, 47, 0.82);
     --site-surface-solid                : #0d1b2f;
     --site-accent                       : #22d3ee;
-    --site-accent-2                     : #f59e0b;
+    --site-accent-2                     : #818cf8;
     --site-accent-strong                : #67e8f9;
     --site-on-accent                    : #07111f;
     --site-hairline                     : rgba(237, 247, 255, 0.15);
@@ -82,8 +82,13 @@ html[data-theme="dark"] {
     --site-link-underline               : rgba(125, 211, 252, 0.45);
     --site-grid-color                   : rgba(125, 211, 252, 0.08);
     --site-wash-a                       : rgba(34, 211, 238, 0.13);
-    --site-wash-b                       : rgba(245, 158, 11, 0.12);
+    --site-wash-b                       : rgba(129, 140, 248, 0.14);
     --site-shadow-soft                  : 0 18px 60px rgba(0, 0, 0, 0.26);
     --site-shadow-strong                : 0 38px 110px rgba(0, 0, 0, 0.44);
     --site-shadow-color                 : 0 20px 52px rgba(34, 211, 238, 0.20);
+    --site-wash-c                       : rgba(99, 102, 241, 0.16);
+    --site-hero-a                       : rgba(14, 165, 233, 0.12);
+    --site-hero-b                       : rgba(99, 102, 241, 0.17);
+    --site-scanline                     : rgba(103, 232, 249, 0.11);
+    --site-button-bg                    : rgba(9, 20, 36, 0.68);
 }
