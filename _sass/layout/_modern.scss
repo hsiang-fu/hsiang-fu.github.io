@@ -2021,12 +2021,16 @@ body {
 }
 
 .archive .archive__item-title {
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.32rem;
+}
+
+.archive .archive__item > p:not(.archive__item-excerpt) {
+  margin-top: 0.25rem;
 }
 
 .archive .archive__item-excerpt,
 .archive .archive__item-excerpt > p:first-child {
-  margin-top: 0.75rem;
+  margin-top: 0.35rem;
 }
 
 /* ==========================================================================
