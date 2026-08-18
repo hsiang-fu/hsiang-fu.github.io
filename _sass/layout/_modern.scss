@@ -1268,6 +1268,14 @@ body {
   margin-bottom: 0;
 }
 
+.home-section--timeline h2 {
+  margin-bottom: 1.05rem;
+}
+
+.home-section--timeline .timeline {
+  gap: 1.1rem;
+}
+
 .current-work__stack {
   display: grid;
   gap: 1rem;
