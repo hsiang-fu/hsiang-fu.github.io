@@ -99,9 +99,9 @@ redirect_from:
     <div class="cv-projects">
       <article>
         <p class="cv-project__number">01 / Active</p>
-        <h3>Honda Dexterous Hand Project</h3>
+        <h3>In-Context Reinforcement Learning for State Machine Policies</h3>
         <time>Aug 2026 &ndash; Present</time>
-        <p>Building a synchronized nine-camera manipulation-data pipeline and an in-context reinforcement learning framework for adapting dexterous-hand policies.</p>
+        <p>Deployed ICRL onto Honda Dexterous Hand @ Honda Research Institute in San Jose.</p>
       </article>
       <article>
         <p class="cv-project__number">02 / Submitted to ICRA 2027</p>
