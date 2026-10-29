@@ -42,20 +42,28 @@ redirect_from:
             <a href="https://github.com/manan-santoki/github-orbit" target="_blank" rel="noreferrer">GitHub Orbit <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-        <div class="signal-console__window" data-terminal-window>
-          <div class="signal-console__chrome"><span aria-hidden="true"><i></i><i></i><i></i></span><strong>sean@robot-lab — terminal</strong><small>click to interact</small></div>
-          <div class="signal-terminal__output" data-terminal-output aria-live="polite">
-            <div class="signal-terminal__entry signal-terminal__entry--system">
-              <span>Research interface ready.</span>
-              <span>Type <strong>help</strong> to see available commands.</span>
+        <div class="signal-console__window" data-terminal-window tabindex="0" role="application" aria-label="Interactive portfolio terminal">
+          <div class="signal-console__chrome">
+            <span class="signal-console__lights" aria-hidden="true"><i></i><i></i><i></i></span>
+            <strong>sean@robot-lab — terminal</strong>
+            <small data-terminal-status>click to interact</small>
+          </div>
+          <div class="signal-terminal__demo" data-terminal-demo aria-hidden="true">
+            <div class="signal-terminal__commandline"><span>$</span><span data-terminal-demo-command>whoami</span><i data-terminal-caret aria-hidden="true">▋</i></div>
+            <div class="signal-terminal__demo-output" data-terminal-demo-output>
+              <div class="signal-terminal__line signal-terminal__line--out">hsiang-fu</div>
+              <div class="signal-terminal__line signal-terminal__line--out">Computer Science Ph.D. Student · Robot Learning Researcher</div>
+              <div class="signal-terminal__line signal-terminal__line--out">Phoenix, AZ · Arizona State University</div>
             </div>
           </div>
-          <form class="signal-terminal__form" data-terminal-form>
-            <label for="research-terminal-input" class="sr-only">Terminal command</label>
-            <span class="signal-prompt" aria-hidden="true">$</span>
-            <input id="research-terminal-input" data-terminal-input type="text" inputmode="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="type a command">
-            <button type="submit">Run</button>
-          </form>
+          <div class="signal-terminal__interactive" data-terminal-interactive hidden>
+            <div class="signal-terminal__output" data-terminal-output aria-live="polite"></div>
+            <div class="signal-terminal__form">
+              <label for="research-terminal-input" class="sr-only">Terminal input</label>
+              <span class="signal-prompt" aria-hidden="true">$</span>
+              <input id="research-terminal-input" data-terminal-input type="text" inputmode="text" autocomplete="off" autocapitalize="none" spellcheck="false" aria-label="Terminal input">
+            </div>
+          </div>
         </div>
       </div>
     </div>

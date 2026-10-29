@@ -2184,91 +2184,213 @@ body {
 }
 
 .signal-hero--fullscreen .signal-console__window {
+  box-sizing: border-box;
   display: flex;
-  min-height: 12rem;
-  height: clamp(12rem, 24vh, 14rem);
+  min-height: 242px;
+  height: 242px;
   flex-direction: column;
+  padding: 25.6px;
+  overflow: hidden;
+  border-radius: 10px;
   cursor: text;
+  transition: border-color 220ms ease, box-shadow 280ms cubic-bezier(0.22, 1, 0.36, 1), transform 220ms ease;
+}
+
+.signal-console__window.is-focused,
+.signal-console__window.is-interactive {
+  border-color: color-mix(in srgb, var(--signal-accent) 72%, var(--signal-line));
+  box-shadow: var(--signal-shadow), 0 0 0 2px color-mix(in srgb, var(--signal-accent) 62%, transparent);
 }
 
 .signal-hero--fullscreen .signal-console__chrome {
-  min-height: 2.5rem;
-  flex: 0 0 2.5rem;
+  min-height: 1rem;
+  flex: 0 0 auto;
+  margin-bottom: 0.75rem;
+  padding: 0;
+  border-bottom: 0;
 }
 
-.signal-console__chrome > span {
+.signal-console__chrome .signal-console__lights {
   display: inline-flex;
-  gap: 0.42rem;
+  gap: 0.5rem;
+  margin-left: 0;
+}
+
+.signal-console__chrome .signal-console__lights i {
+  width: 12px;
+  height: 12px;
+  border: 0;
+  opacity: 0.48;
+}
+
+.signal-console__chrome .signal-console__lights i:first-child {
+  background: #648cff;
+}
+
+.signal-console__chrome .signal-console__lights i:nth-child(2) {
+  background: #42cfe5;
+}
+
+.signal-console__chrome .signal-console__lights i:nth-child(3) {
+  background: #5fd5b5;
 }
 
 .signal-console__chrome strong {
-  margin-left: 0.45rem;
+  margin-left: 0.5rem;
+  color: var(--signal-faint);
+  font-size: 11px;
   font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .signal-console__chrome small {
+  display: flex;
+  gap: 0.55rem;
+  align-items: center;
   margin-left: auto;
-  font-size: 0.58rem;
+  color: var(--signal-faint);
+  font-size: 10px;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
-.signal-terminal__output {
+.signal-console__escape {
+  opacity: 0.45;
+}
+
+.signal-console__active {
+  color: #4bd69f;
+}
+
+.signal-terminal__demo,
+.signal-terminal__interactive {
   display: flex;
   min-height: 0;
   flex: 1 1 auto;
   flex-direction: column;
-  gap: 0.65rem;
-  overflow-y: auto;
-  padding: 1rem 1.2rem 0.7rem;
-  scrollbar-color: var(--signal-line) transparent;
-  scrollbar-width: thin;
 }
 
-.signal-terminal__entry {
-  display: grid;
-  gap: 0.18rem;
+.signal-terminal__demo[hidden],
+.signal-terminal__interactive[hidden] {
+  display: none !important;
+}
+
+.signal-terminal__commandline {
+  display: flex;
+  gap: 0.4rem;
+  color: var(--signal-text);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12.5px;
+  line-height: 1.7;
+}
+
+.signal-terminal__commandline > span:first-child {
+  flex: 0 0 auto;
+  color: var(--signal-accent);
+  user-select: none;
+}
+
+.signal-terminal__commandline i {
+  color: var(--signal-accent);
+  font-style: normal;
+  animation: signal-terminal-blink 1s step-end infinite;
+}
+
+.signal-terminal__demo-output,
+.signal-terminal__output {
+  min-height: 0;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.signal-terminal__demo-output::-webkit-scrollbar,
+.signal-terminal__output::-webkit-scrollbar {
+  display: none;
+}
+
+.signal-terminal__output {
+  display: block;
+  padding: 0;
+}
+
+.signal-terminal__line {
+  min-height: 0;
   color: var(--signal-muted);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.68rem;
-  line-height: 1.5;
+  font-size: 12.5px;
+  line-height: 1.7;
+  white-space: pre-wrap;
 }
 
-.signal-terminal__entry--command {
-  display: block;
+.signal-terminal__line--blank {
+  height: 2px;
+}
+
+.signal-terminal__line--welcome,
+.signal-terminal__line--section {
+  color: var(--signal-text);
+  font-weight: 600;
+}
+
+.signal-terminal__line--welcome,
+.signal-terminal__line--link {
+  color: var(--signal-accent);
+}
+
+.signal-terminal__line--dim {
+  color: var(--signal-faint);
+  opacity: 0.6;
+}
+
+.signal-terminal__line--error {
+  color: #ff7d9c;
+}
+
+.signal-terminal__line--cmd {
+  display: flex;
+  gap: 0.4rem;
   color: var(--signal-text);
 }
 
-.signal-terminal__entry--command::before {
-  margin-right: 0.55rem;
+.signal-terminal__line--cmd::before {
+  flex: 0 0 auto;
   color: var(--signal-accent);
   content: "$";
+  user-select: none;
 }
 
-.signal-terminal__entry--error {
-  color: var(--signal-accent-2);
-}
-
-.signal-terminal__entry strong,
-.signal-terminal__entry a {
-  color: var(--signal-text);
-}
-
-.signal-terminal__entry a {
+.signal-terminal__line--link {
+  display: block;
   width: fit-content;
+  text-decoration: none;
+  text-underline-offset: 0.2rem;
+}
+
+.signal-terminal__line--link:hover {
   text-decoration: underline;
-  text-decoration-color: var(--signal-line);
-  text-underline-offset: 0.22rem;
+}
+
+.signal-terminal__line--enter {
+  animation: signal-terminal-line-in 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--line-delay, 0ms);
 }
 
 .signal-terminal__form {
-  display: grid;
-  flex: 0 0 2.8rem;
-  grid-template-columns: auto minmax(0, 1fr) auto;
-  gap: 0.65rem;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 0.4rem;
   align-items: center;
-  min-height: 2.8rem;
-  padding: 0 0.75rem 0 1.2rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0 0;
   border-top: 1px solid var(--signal-line-soft);
   font-family: "IBM Plex Mono", monospace;
+}
+
+.signal-terminal__form .signal-prompt {
+  flex: 0 0 auto;
+  font-size: 12.5px;
 }
 
 .signal-terminal__form input {
@@ -2280,32 +2402,78 @@ body {
   color: var(--signal-text);
   background: transparent;
   box-shadow: none;
+  caret-color: var(--signal-accent);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.7rem;
+  font-size: 12.5px;
+  line-height: 1.7;
 }
 
-.signal-terminal__form input::placeholder {
-  color: var(--signal-faint);
+.signal-terminal__form input:focus {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
 }
 
-.signal-terminal__form button {
-  min-height: 1.9rem;
-  padding: 0 0.7rem;
-  border: 1px solid var(--signal-line);
-  border-radius: 2px;
+@keyframes signal-terminal-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes signal-terminal-line-in {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signal-terminal__commandline i,
+  .signal-terminal__line--enter {
+    animation: none;
+  }
+}
+
+/* Legacy output remains readable if an older cached page reaches the new styles. */
+.signal-terminal__entry {
+  display: grid;
+  gap: 0.18rem;
   color: var(--signal-muted);
-  background: transparent;
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.58rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease;
+  font-size: 0.72rem;
+  line-height: 1.5;
 }
 
-.signal-terminal__form button:hover {
-  border-color: var(--signal-accent);
-  color: var(--signal-on-accent);
-  background: var(--signal-accent);
+.signal-terminal__entry--command::before {
+  margin-right: 0.55rem;
+  color: var(--signal-accent);
+  content: "$";
+}
+
+.signal-terminal__entry a {
+  color: var(--signal-accent);
+}
+
+/* Prevent the terminal's scrolling output from affecting the page. */
+.signal-terminal__interactive {
+  overflow: hidden;
+}
+
+@media (min-width: 901px) and (min-height: 780px) {
+  .signal-hero--fullscreen .signal-console__window {
+    min-height: 250px;
+    height: 250px;
+  }
 }
 
 @media (max-width: 1180px) {
@@ -2412,6 +2580,8 @@ body {
   }
 
   .signal-hero--fullscreen .signal-console__window {
-    height: 17rem;
+    min-height: 230px;
+    height: 230px;
+    padding: 20px;
   }
 }
