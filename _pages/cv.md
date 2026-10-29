@@ -105,7 +105,7 @@ redirect_from:
       </article>
       <article>
         <p class="cv-project__number">02 / Submitted to ICRA 2027</p>
-        <h3>ComposeR: Training-Free Reward Estimation for Robot Manipulation</h3>
+        <h3>Training-Free Reward Estimation for Robot Manipulation</h3>
         <time>Jan 2026 &ndash; Present</time>
         <p>Developing dense, interpretable progress rewards from trajectory video using VLM token probabilities, multi-view evidence, verification, and temporal checks; achieved 92.35% task-outcome prediction accuracy.</p>
       </article>

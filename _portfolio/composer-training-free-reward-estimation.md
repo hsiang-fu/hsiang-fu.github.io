@@ -1,5 +1,5 @@
 ---
-title: "ComposeR: Training-Free Reward Estimation for Robot Manipulation"
+title: "Training-Free Reward Estimation for Robot Manipulation"
 excerpt: "Developing dense, interpretable progress rewards from robot trajectory video using VLM token probabilities, multi-view evidence, verification, and temporal checks."
 collection: portfolio
 project_rank: 2
@@ -8,7 +8,7 @@ project_period: "Jan 2026 - Present"
 
 ## Overview
 
-ComposeR develops dense, interpretable progress rewards directly from robot trajectory video without task-specific reward-model training. The method combines vision-language model token probabilities with multi-view evidence, verification, and temporal checks.
+This project develops dense, interpretable progress rewards directly from robot trajectory video without task-specific reward-model training. The method combines vision-language model token probabilities with multi-view evidence, verification, and temporal checks.
 
 ## Current Results
 

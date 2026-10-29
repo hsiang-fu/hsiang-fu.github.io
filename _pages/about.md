@@ -131,7 +131,7 @@ redirect_from:
         </a>
         <a class="field-work__feature" href="/portfolio/composer-training-free-reward-estimation/">
           <span class="field-work__index">W.02 / Jan 2026</span>
-          <div><p>Training-free reward estimation</p><h3>ComposeR: Training-Free Reward Estimation for Robot Manipulation</h3></div>
+          <div><p>Training-free reward estimation</p><h3>Training-Free Reward Estimation for Robot Manipulation</h3></div>
           <p>Dense, interpretable progress rewards from robot trajectory video using VLM evidence, verification, and temporal checks.</p>
           <span class="field-work__arrow" aria-hidden="true">&nearr;</span>
         </a>
@@ -174,7 +174,7 @@ redirect_from:
     </header>
     <div class="field-log__entries">
       <article><time>2026 / Now</time><span>01</span><div><h3>PhD Second Year Ongoing!</h3><p>Continuing research in robot learning, reward models, and adaptive behavior at Arizona State University.</p></div></article>
-      <article><time>2026 / Active</time><span>02</span><div><h3>ComposeR reward estimation</h3><p>Using VLM evidence and temporal checks to estimate interpretable progress rewards from robot trajectories.</p></div></article>
+      <article><time>2026 / Active</time><span>02</span><div><h3>Training-free reward estimation</h3><p>Using VLM evidence and temporal checks to estimate interpretable progress rewards from robot trajectories.</p></div></article>
       <article><time>2025 / Published</time><span>03</span><div><h3>ReVision at IJCNLP-AACL</h3><p>Compact visual instruction rewriting for privacy-preserving multimodal interaction.</p></div></article>
     </div>
   </section>
@@ -185,7 +185,7 @@ redirect_from:
     </header>
     <div class="field-timeline__track">
       <article><time>Aug 2026 &ndash; Present</time><span></span><div><p>Honda Research Institute, San Jose</p><h3>In-Context Reinforcement Learning for State Machine Policies</h3><p>Deployed ICRL onto Honda Dexterous Hand @ Honda Research Institute in San Jose.</p></div></article>
-      <article><time>Jan 2026 &ndash; Present</time><span></span><div><p>ComposeR + UR5 Golf</p><h3>Reward estimation and policy search</h3><p>Built VLM progress rewards and a UR5 putting pipeline with DMP-based global search.</p></div></article>
+      <article><time>Jan 2026 &ndash; Present</time><span></span><div><p>Reward estimation + UR5 Golf</p><h3>Reward estimation and policy search</h3><p>Built VLM progress rewards and a UR5 putting pipeline with DMP-based global search.</p></div></article>
       <article><time>Aug 2025 &ndash; Present</time><span></span><div><p>Interactive Robotics Laboratory, ASU</p><h3>Ph.D. + Graduate Research Assistant</h3><p>Researching language- and vision-conditioned manipulation, rewards, and adaptive behavior.</p></div></article>
       <article><time>Jan 2023 &ndash; Feb 2025</time><span></span><div><p>IJCNLP-AACL 2025</p><h3>ReVision</h3><p>Co-developed a compact VLM and 39,000+ pairs for privacy-preserving instruction rewriting.</p></div></article>
       <article><time>Aug 2022 &ndash; Dec 2024</time><span></span><div><p>University of Texas at Austin</p><h3>B.S. in Informatics</h3><p>Completed Human-Centered Data Science with a 3.94 GPA.</p></div></article>
