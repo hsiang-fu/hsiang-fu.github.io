@@ -2271,10 +2271,14 @@ body.has-signal-cursor.cursor-terminal * {
     border-right: 0;
   }
 
-  .mobile-nav-panel a:hover,
   .mobile-nav-panel a.is-active {
     color: var(--signal-text);
     background: transparent;
+  }
+
+  .mobile-nav-panel a:hover {
+    color: var(--signal-text);
+    background: var(--signal-accent-soft);
   }
 
   .mobile-nav-panel a:hover span,
@@ -2746,11 +2750,18 @@ body {
   opacity: 0.78;
 }
 
-.greedy-nav .visible-links a.signal-nav-link:not(.site-mark):not(.theme-toggle):hover,
 .greedy-nav .visible-links a.signal-nav-link:not(.site-mark):not(.theme-toggle).is-active {
   color: var(--signal-text);
   background: transparent;
   border-radius: 0;
+  box-shadow: none;
+  transform: none;
+}
+
+.greedy-nav .visible-links a.signal-nav-link:not(.site-mark):not(.theme-toggle):hover {
+  color: var(--signal-text);
+  background: var(--signal-accent-soft);
+  border-radius: 6px;
   box-shadow: none;
   transform: none;
 }
