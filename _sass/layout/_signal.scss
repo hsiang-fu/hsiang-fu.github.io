@@ -178,7 +178,7 @@ a {
 }
 
 .greedy-nav .visible-links a:not(.site-mark) span {
-  color: var(--signal-muted);
+  color: var(--signal-accent);
   font-size: 0.62rem;
 }
 
@@ -2274,12 +2274,15 @@ body.has-signal-cursor.cursor-terminal * {
   .mobile-nav-panel a:hover,
   .mobile-nav-panel a.is-active {
     color: var(--signal-text);
-    background: var(--signal-accent-soft);
+    background: transparent;
   }
 
   .mobile-nav-panel a:hover span,
+  .mobile-nav-panel a.is-active span {
+    color: var(--signal-accent);
+  }
+
   .mobile-nav-panel a:hover i,
-  .mobile-nav-panel a.is-active span,
   .mobile-nav-panel a.is-active i {
     color: var(--signal-text);
   }
@@ -2738,21 +2741,23 @@ body {
 }
 
 .greedy-nav .visible-links .signal-nav-link span {
-  color: var(--signal-muted);
+  color: var(--signal-accent);
   font-size: 0.58rem;
   opacity: 0.78;
 }
 
-.greedy-nav .visible-links .signal-nav-link:hover,
-.greedy-nav .visible-links .signal-nav-link.is-active {
+.greedy-nav .visible-links a.signal-nav-link:not(.site-mark):not(.theme-toggle):hover,
+.greedy-nav .visible-links a.signal-nav-link:not(.site-mark):not(.theme-toggle).is-active {
   color: var(--signal-text);
   background: transparent;
+  border-radius: 0;
+  box-shadow: none;
   transform: none;
 }
 
 .greedy-nav .visible-links a.signal-nav-link:hover span,
 .greedy-nav .visible-links a.signal-nav-link.is-active span {
-  color: var(--signal-text);
+  color: var(--signal-accent);
   opacity: 1;
 }
 
