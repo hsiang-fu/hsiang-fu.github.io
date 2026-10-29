@@ -315,6 +315,20 @@ a {
 .signal-home {
   width: min(1280px, calc(100% - 2.5rem));
   margin: 0 auto;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.signal-home img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+body.is-homepage-copy-protected {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 .signal-home p,

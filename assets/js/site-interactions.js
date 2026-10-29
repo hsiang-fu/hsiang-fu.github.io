@@ -95,6 +95,29 @@
     renderCursor();
   }
 
+  function initHomepageCopyGuard() {
+    var homepage = document.querySelector(".signal-home");
+    if (!homepage) return;
+
+    document.body.classList.add("is-homepage-copy-protected");
+
+    document.addEventListener("copy", function (event) {
+      event.preventDefault();
+    });
+
+    document.addEventListener("cut", function (event) {
+      event.preventDefault();
+    });
+
+    document.addEventListener("contextmenu", function (event) {
+      event.preventDefault();
+    });
+
+    homepage.addEventListener("dragstart", function (event) {
+      event.preventDefault();
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     var consoleRoot = document.querySelector("[data-console]");
     if (consoleRoot) {
@@ -163,5 +186,6 @@
     }
 
     initSignalCursor();
+    initHomepageCopyGuard();
   });
 })();
