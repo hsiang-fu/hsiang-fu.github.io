@@ -1535,17 +1535,43 @@ body.is-homepage-copy-protected {
   }
 
   body.has-signal-cursor [data-terminal-window],
-  body.has-signal-cursor [data-terminal-window] input {
-    cursor: text !important;
+  body.has-signal-cursor [data-terminal-window] * {
+    cursor: none !important;
   }
 
-  body.has-signal-cursor [data-terminal-window] a {
-    cursor: pointer !important;
-  }
-
-  body.has-signal-cursor.cursor-terminal .signal-cursor-dot,
-  body.has-signal-cursor.cursor-terminal .signal-cursor-ring {
+  body.has-signal-cursor.cursor-terminal .signal-cursor-dot {
     opacity: 0;
+  }
+
+  body.has-signal-cursor.cursor-terminal .signal-cursor-ring {
+    width: 3px;
+    height: 28px;
+    border: 0;
+    border-radius: 2px;
+    opacity: 1;
+    background: var(--signal-accent);
+    box-shadow: 0 0 0 1px var(--signal-accent-soft), 0 0 14px color-mix(in srgb, var(--signal-accent) 72%, transparent);
+  }
+
+  body.has-signal-cursor.cursor-terminal .signal-cursor-ring::before,
+  body.has-signal-cursor.cursor-terminal .signal-cursor-ring::after {
+    position: absolute;
+    left: 50%;
+    width: 13px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--signal-accent);
+    box-shadow: 0 0 8px color-mix(in srgb, var(--signal-accent) 65%, transparent);
+    content: "";
+    transform: translateX(-50%);
+  }
+
+  body.has-signal-cursor.cursor-terminal .signal-cursor-ring::before {
+    top: -1px;
+  }
+
+  body.has-signal-cursor.cursor-terminal .signal-cursor-ring::after {
+    bottom: -1px;
   }
 
   body.has-signal-cursor.cursor-pressed .signal-cursor-ring {
