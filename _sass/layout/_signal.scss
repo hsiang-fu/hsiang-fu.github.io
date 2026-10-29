@@ -217,11 +217,14 @@ a {
 }
 
 .theme-toggle,
-.greedy-nav .theme-toggle {
-  display: inline-grid;
+.greedy-nav .theme-toggle,
+.greedy-nav .visible-links a.theme-toggle {
+  display: grid;
+  flex: 0 0 2.55rem;
   width: 2.55rem;
   height: 2.55rem;
   place-items: center;
+  align-self: center;
   margin: 0 0 0 0.3rem;
   padding: 0;
   border: 1px solid var(--signal-line);
@@ -233,7 +236,16 @@ a {
   transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
 }
 
-.theme-toggle:hover {
+.theme-toggle i {
+  display: grid;
+  width: 1rem;
+  height: 1rem;
+  place-items: center;
+  line-height: 1;
+}
+
+.theme-toggle:hover,
+.greedy-nav .visible-links a.theme-toggle:hover {
   border-color: var(--signal-accent);
   color: var(--signal-accent);
   background: var(--signal-accent-soft);
