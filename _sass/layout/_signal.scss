@@ -3623,7 +3623,7 @@ body {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 1.5rem;
   align-items: start;
-  padding: 2rem 0 3.5rem;
+  padding: 1.5rem 0;
 }
 
 .field-work__heading p {
@@ -3633,16 +3633,6 @@ body {
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.66rem;
   text-transform: uppercase;
-}
-
-.field-work__heading h3 {
-  grid-column: 4 / -1;
-  max-width: 19ch;
-  margin: 0;
-  color: var(--signal-text);
-  font-size: 2.8rem;
-  font-weight: 500;
-  line-height: 1;
 }
 
 .field-work__grid {
@@ -4258,8 +4248,7 @@ body {
     gap: 1.2rem;
   }
 
-  .field-work__heading p,
-  .field-work__heading h3 {
+  .field-work__heading p {
     grid-column: 1;
   }
 
@@ -4427,10 +4416,6 @@ body {
 
   .field-research__work {
     margin-top: 5rem;
-  }
-
-  .field-work__heading h3 {
-    font-size: 2.2rem;
   }
 
   .field-work__grid {

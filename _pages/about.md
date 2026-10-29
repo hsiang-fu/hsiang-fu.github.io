@@ -126,10 +126,9 @@ redirect_from:
       <article><span>R.04</span><h3>Reinforcement Learning</h3><p>Improve policies through interaction while remaining useful under shifting constraints.</p><i>Improve</i></article>
       <article><span>R.05</span><h3>Human-Robot Collaboration</h3><p>Keep people, intent, and uncertainty visible inside the learning and decision loop.</p><i>Collaborate</i></article>
     </div>
-    <div class="field-work field-research__work" aria-labelledby="selected-work-heading">
+    <div class="field-work field-research__work" aria-label="Selected Publications and Projects">
       <div class="field-work__heading">
         <p>Selected Publications &amp; Projects</p>
-        <h3 id="selected-work-heading">Built to explain an idea, test a claim, or move a robot.</h3>
       </div>
       <div class="field-work__grid">
         <a class="field-work__feature" href="/publication/2025-02-20-revision">
