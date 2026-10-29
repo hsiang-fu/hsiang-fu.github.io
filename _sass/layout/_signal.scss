@@ -1534,19 +1534,18 @@ body.is-homepage-copy-protected {
     background: var(--signal-accent-soft);
   }
 
-  body.has-signal-cursor.cursor-terminal .signal-cursor-dot {
-    width: 5px;
-    height: 5px;
-    border-radius: 1px;
-    background: var(--signal-accent);
+  body.has-signal-cursor [data-terminal-window],
+  body.has-signal-cursor [data-terminal-window] input {
+    cursor: text !important;
   }
 
+  body.has-signal-cursor [data-terminal-window] a {
+    cursor: pointer !important;
+  }
+
+  body.has-signal-cursor.cursor-terminal .signal-cursor-dot,
   body.has-signal-cursor.cursor-terminal .signal-cursor-ring {
-    width: 36px;
-    height: 36px;
-    border-color: var(--signal-accent);
-    border-radius: 3px;
-    background: var(--signal-accent-soft);
+    opacity: 0;
   }
 
   body.has-signal-cursor.cursor-pressed .signal-cursor-ring {
