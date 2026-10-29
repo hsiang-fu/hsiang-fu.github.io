@@ -237,6 +237,7 @@ a {
 .theme-toggle,
 .greedy-nav .theme-toggle,
 .greedy-nav .visible-links a.theme-toggle {
+  box-sizing: border-box;
   display: grid;
   flex: 0 0 2.55rem;
   width: 2.55rem;
@@ -2420,6 +2421,7 @@ body {
 }
 
 .signal-nav-actions {
+  height: 44px;
   gap: 0.85rem;
 }
 
@@ -2446,14 +2448,15 @@ body {
 }
 
 .greedy-nav .visible-links .signal-nav-contact {
+  position: relative;
+  box-sizing: border-box;
   display: inline-flex;
   min-width: 8rem;
   height: 44px;
-  gap: 0.6rem;
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: 0 1rem;
+  padding: 0 2rem;
   border: 1px solid var(--signal-accent);
   border-radius: 2px;
   color: var(--signal-on-accent);
@@ -2465,14 +2468,33 @@ body {
   transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
 }
 
+.greedy-nav .visible-links .signal-nav-contact span {
+  color: inherit;
+  line-height: 1;
+}
+
+.greedy-nav .visible-links .signal-nav-contact__label {
+  font-size: inherit;
+}
+
+.greedy-nav .visible-links .signal-nav-contact__icon {
+  position: absolute;
+  right: 1rem;
+  display: grid;
+  width: 0.8rem;
+  height: 0.8rem;
+  place-items: center;
+  font-size: 0.7rem;
+}
+
 .greedy-nav .visible-links .signal-nav-contact:hover {
   color: var(--signal-accent);
   background: transparent;
   transform: translateY(-1px);
 }
 
-.greedy-nav .visible-links .theme-toggle,
-.greedy-nav .visible-links .mobile-nav-toggle {
+.greedy-nav .visible-links a.theme-toggle,
+.greedy-nav .visible-links a.mobile-nav-toggle {
   flex: 0 0 44px;
   width: 44px;
   height: 44px;
@@ -2957,8 +2979,8 @@ body {
     gap: 0.55rem;
   }
 
-  .greedy-nav .visible-links .theme-toggle,
-  .greedy-nav .visible-links .mobile-nav-toggle {
+  .greedy-nav .visible-links a.theme-toggle,
+  .greedy-nav .visible-links a.mobile-nav-toggle {
     flex-basis: 40px;
     width: 40px;
     height: 40px;
