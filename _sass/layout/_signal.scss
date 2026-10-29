@@ -1305,6 +1305,344 @@ body.is-homepage-copy-protected {
   transform: translateY(-2px);
 }
 
+/* Curriculum vitae */
+
+.cv-shell {
+  margin-top: 0;
+}
+
+.cv-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(17rem, 0.55fr);
+  gap: clamp(2.5rem, 7vw, 7rem);
+  align-items: end;
+  padding: clamp(2.2rem, 4vw, 3.5rem) 0 clamp(3rem, 6vw, 5rem);
+  border-bottom: 1px solid var(--signal-line);
+}
+
+.cv-eyebrow,
+.cv-section__heading > p,
+.cv-project__number,
+.cv-publication > div > p:first-child {
+  margin: 0;
+  color: var(--signal-accent);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.cv-intro h2 {
+  max-width: 22ch;
+  margin: 1.1rem 0 1.35rem;
+  color: var(--signal-text);
+  font-size: clamp(1.8rem, 3.3vw, 3.1rem);
+  font-weight: 500;
+  line-height: 1.02;
+}
+
+.cv-intro > div:first-child > p:last-child {
+  max-width: 46rem;
+  margin: 0;
+  color: var(--signal-muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.cv-intro__actions {
+  border-top: 1px solid var(--signal-line);
+}
+
+.cv-intro__actions a {
+  display: flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 0.1rem;
+  border-bottom: 1px solid var(--signal-line);
+  color: var(--signal-muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 180ms ease, padding 180ms ease, background-color 180ms ease;
+}
+
+.cv-intro__actions a:hover {
+  padding-right: 0.65rem;
+  padding-left: 0.65rem;
+  color: var(--signal-text);
+  background: var(--signal-accent-soft);
+}
+
+.cv-intro__actions .cv-download {
+  color: var(--signal-accent);
+}
+
+.cv-jump {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  border-bottom: 1px solid var(--signal-line);
+}
+
+.cv-jump a {
+  display: flex;
+  min-width: 0;
+  min-height: 4rem;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.8rem 0.9rem;
+  border-right: 1px solid var(--signal-line);
+  color: var(--signal-muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.62rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 180ms ease, background-color 180ms ease;
+}
+
+.cv-jump a:first-child {
+  padding-left: 0;
+}
+
+.cv-jump a:last-child {
+  border-right: 0;
+}
+
+.cv-jump a span {
+  color: var(--signal-accent);
+}
+
+.cv-jump a:hover {
+  color: var(--signal-text);
+  background: var(--signal-accent-soft);
+}
+
+.cv-section {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.28fr) minmax(0, 1fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  padding: clamp(3.5rem, 7vw, 6.5rem) 0 0;
+  scroll-margin-top: 7rem;
+}
+
+.cv-section__heading {
+  align-self: start;
+  position: sticky;
+  top: 6.5rem;
+}
+
+.cv-section__heading h2 {
+  margin: 0.65rem 0 0;
+  padding: 0;
+  border: 0;
+  color: var(--signal-text);
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.cv-records,
+.cv-projects,
+.cv-skills {
+  border-top: 1px solid var(--signal-line);
+}
+
+.cv-record {
+  display: grid;
+  grid-template-columns: minmax(9rem, 0.3fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  padding: clamp(2rem, 4vw, 3.1rem) 0;
+  border-bottom: 1px solid var(--signal-line);
+}
+
+.cv-record--compact {
+  grid-template-columns: minmax(9rem, 0.3fr) minmax(0, 1fr) auto;
+  align-items: start;
+}
+
+.cv-record time,
+.cv-projects time {
+  color: var(--signal-faint);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.66rem;
+  text-transform: uppercase;
+}
+
+.cv-record h3,
+.cv-projects h3,
+.cv-publication h3 {
+  margin: 0;
+  color: var(--signal-text);
+  font-weight: 500;
+  line-height: 1.12;
+}
+
+.cv-record h3 {
+  font-size: clamp(1.3rem, 2.2vw, 1.9rem);
+}
+
+.cv-record p {
+  margin: 0.55rem 0 0;
+  color: var(--signal-muted);
+}
+
+.cv-record .cv-record__place {
+  color: var(--signal-text);
+}
+
+.cv-record .cv-record__meta {
+  color: var(--signal-accent);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.67rem;
+  text-transform: uppercase;
+}
+
+.cv-record > .cv-record__meta {
+  margin-top: 0.25rem;
+  white-space: nowrap;
+}
+
+.cv-record ul {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cv-record li {
+  position: relative;
+  margin: 0.75rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--signal-muted);
+  line-height: 1.65;
+}
+
+.cv-record li::before {
+  position: absolute;
+  top: 0.7em;
+  left: 0;
+  width: 0.34rem;
+  height: 0.34rem;
+  background: var(--signal-accent);
+  content: "";
+}
+
+.cv-projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cv-projects article {
+  display: flex;
+  min-height: 22rem;
+  flex-direction: column;
+  padding: clamp(1.8rem, 3vw, 2.7rem);
+  border-right: 1px solid var(--signal-line);
+  border-bottom: 1px solid var(--signal-line);
+  transition: background-color 200ms ease;
+}
+
+.cv-projects article:nth-child(even) {
+  border-right: 0;
+}
+
+.cv-projects article:hover {
+  background: var(--signal-accent-soft);
+}
+
+.cv-projects h3 {
+  margin-top: 1.25rem;
+  font-size: clamp(1.35rem, 2.25vw, 2rem);
+}
+
+.cv-projects time {
+  display: block;
+  margin-top: 1rem;
+}
+
+.cv-projects article > p:not(.cv-project__number) {
+  margin: auto 0 0;
+  padding-top: 2rem;
+  color: var(--signal-muted);
+  line-height: 1.65;
+}
+
+.cv-projects a,
+.cv-publication > a {
+  width: fit-content;
+  margin-top: 1.25rem;
+  color: var(--signal-accent);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.66rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.cv-publication {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: end;
+  padding: clamp(2rem, 4vw, 3.5rem) 0;
+  border-top: 1px solid var(--signal-line);
+  border-bottom: 1px solid var(--signal-line);
+}
+
+.cv-publication h3 {
+  max-width: 31ch;
+  margin-top: 1.2rem;
+  font-size: clamp(1.6rem, 3.2vw, 2.8rem);
+}
+
+.cv-publication > div > p:last-child {
+  margin: 1.25rem 0 0;
+  color: var(--signal-muted);
+}
+
+.cv-publication > a {
+  display: inline-flex;
+  min-height: 2.8rem;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--signal-line);
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.cv-publication > a:hover {
+  border-color: var(--signal-accent);
+  color: var(--signal-on-accent);
+  background: var(--signal-accent);
+  transform: translateY(-2px);
+}
+
+.cv-skills {
+  margin: 0;
+}
+
+.cv-skills div {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.28fr) minmax(0, 1fr);
+  gap: 2rem;
+  padding: 1.45rem 0;
+  border-bottom: 1px solid var(--signal-line);
+}
+
+.cv-skills dt {
+  color: var(--signal-accent);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.67rem;
+  text-transform: uppercase;
+}
+
+.cv-skills dd {
+  margin: 0;
+  color: var(--signal-muted);
+  line-height: 1.6;
+}
+
 .page--detail .page__inner-wrap {
   display: block;
 }
@@ -2624,5 +2962,101 @@ body {
     min-height: 230px;
     height: 230px;
     padding: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cv-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-intro__actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cv-intro__actions a:nth-child(odd) {
+    padding-right: 1rem;
+    border-right: 1px solid var(--signal-line);
+  }
+
+  .cv-intro__actions a:nth-child(even) {
+    padding-left: 1rem;
+  }
+
+  .cv-jump {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cv-jump a:nth-child(3) {
+    border-right: 0;
+  }
+
+  .cv-jump a:nth-child(-n + 3) {
+    border-bottom: 1px solid var(--signal-line);
+  }
+
+  .cv-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cv-section__heading {
+    position: static;
+  }
+}
+
+@media (max-width: 680px) {
+  .cv-intro__actions {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-intro__actions a:nth-child(n) {
+    padding-right: 0.1rem;
+    padding-left: 0.1rem;
+    border-right: 0;
+  }
+
+  .cv-jump {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cv-jump a:nth-child(n) {
+    padding-left: 0.75rem;
+    border-right: 1px solid var(--signal-line);
+    border-bottom: 1px solid var(--signal-line);
+  }
+
+  .cv-jump a:nth-child(even) {
+    border-right: 0;
+  }
+
+  .cv-record,
+  .cv-record--compact {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cv-record > .cv-record__meta {
+    margin-top: 0;
+  }
+
+  .cv-projects {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-projects article {
+    min-height: 19rem;
+    border-right: 0;
+  }
+
+  .cv-publication {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .cv-skills div {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
   }
 }
