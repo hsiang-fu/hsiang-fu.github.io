@@ -10,6 +10,34 @@
     return terminalLine("blank", "");
   }
 
+  var phdStartTime = new Date("2025-08-18T00:00:00-07:00").getTime();
+
+  function formatPhdUptime() {
+    var elapsedSeconds = Math.max(0, Math.floor((Date.now() - phdStartTime) / 1000));
+    var days = Math.floor(elapsedSeconds / 86400);
+    var hours = Math.floor((elapsedSeconds % 86400) / 3600);
+    var minutes = Math.floor((elapsedSeconds % 3600) / 60);
+    var seconds = elapsedSeconds % 60;
+
+    return String(days).padStart(3, "0") + ":" +
+      String(hours).padStart(2, "0") + ":" +
+      String(minutes).padStart(2, "0") + ":" +
+      String(seconds).padStart(2, "0");
+  }
+
+  function terminalUptimeLine() {
+    var line = terminalLine("out", "  Uptime:    " + formatPhdUptime() + " (PhD in Progress)");
+    line.liveUptime = true;
+    return line;
+  }
+
+  function updatePhdUptimeElements() {
+    var content = "  Uptime:    " + formatPhdUptime() + " (PhD in Progress)";
+    document.querySelectorAll("[data-live-uptime]").forEach(function (element) {
+      element.textContent = content;
+    });
+  }
+
   var terminalCommands = {
     help: function () {
       return [
@@ -123,7 +151,7 @@
         terminalLine("out", "  Shell      Robot learning research"),
         terminalLine("out", "  WM         Embodied AI + HRI"),
         terminalLine("out", "  CPU        Milk-Tea-powered  @  ∞ MHz"),
-        terminalLine("out", "  Uptime     Ph.D. in progress"),
+        terminalUptimeLine(),
         terminalLine("out", "  Memory     Context · Feedback · Humans"),
         terminalLine("link", "  GitHub     github.com/hsiang-fu", "https://github.com/hsiang-fu", true),
         terminalLine("link", "  Scholar    research profile", "https://scholar.google.com/citations?user=R7oQL2UAAAAJ&hl=en", true),
@@ -190,6 +218,9 @@
     element.className = "signal-terminal__line signal-terminal__line--" + line.type;
     element.textContent = line.content;
     element.dataset.lineId = line.id;
+    if (line.liveUptime) {
+      element.dataset.liveUptime = "true";
+    }
     if (shouldAnimate && line.type !== "blank") {
       element.classList.add("signal-terminal__line--enter");
       element.style.setProperty("--line-delay", Math.min(index * 28, 280) + "ms");
@@ -229,6 +260,9 @@
     var mode = "demo";
     var demoIndex = 0;
     var demoTimer = null;
+
+    updatePhdUptimeElements();
+    window.setInterval(updatePhdUptimeElements, 1000);
 
     function setStatus(nextMode) {
       status.textContent = "";
