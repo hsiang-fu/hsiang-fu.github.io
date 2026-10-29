@@ -12,7 +12,7 @@ redirect_from:
   <section class="field-hero" aria-labelledby="home-title">
     <div class="field-status" aria-label="Profile status">
       <span><i aria-hidden="true"></i> Hsiang Fu / Sean</span>
-      <span>Robot learning researcher</span>
+      <span>CS PhD Student @ ASU</span>
       <span>Phoenix, Arizona / UTC-7</span>
     </div>
 
@@ -62,7 +62,7 @@ redirect_from:
             <div class="signal-terminal__commandline"><span>$</span><span data-terminal-demo-command>whoami</span><i data-terminal-caret aria-hidden="true">&#9612;</i></div>
             <div class="signal-terminal__demo-output" data-terminal-demo-output>
               <div class="signal-terminal__line signal-terminal__line--out">hsiang-fu</div>
-              <div class="signal-terminal__line signal-terminal__line--out">Robot Learning Researcher / Computer Science Ph.D.</div>
+              <div class="signal-terminal__line signal-terminal__line--out">CS PhD Student @ ASU</div>
               <div class="signal-terminal__line signal-terminal__line--out">Context + feedback + humans -&gt; adaptive behavior</div>
             </div>
           </div>

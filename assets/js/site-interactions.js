@@ -34,7 +34,7 @@
     whoami: function () {
       return [
         terminalLine("out", "hsiang-fu"),
-        terminalLine("out", "Computer Science Ph.D. Student  ·  Robot Learning Researcher"),
+        terminalLine("out", "CS PhD Student @ ASU"),
         terminalLine("out", "Phoenix, AZ  ·  Arizona State University")
       ];
     },
@@ -149,7 +149,7 @@
     "cat readme.md": function () {
       return [
         terminalLine("section", "# Hsiang 'Sean' Fu"),
-        terminalLine("out", "Computer Science Ph.D. Student · Robot Learning Researcher"),
+        terminalLine("out", "CS PhD Student @ ASU"),
         blankLine(),
         terminalLine("out", '"Robots that learn from context, feedback, and humans."'),
         blankLine(),
