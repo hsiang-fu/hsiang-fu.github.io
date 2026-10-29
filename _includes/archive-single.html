@@ -36,7 +36,11 @@
     {% if post.collection == 'teaching' %}
       <p class="archive__item-meta">{{ post.type }} / {{ post.venue }} / {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
     {% elsif post.collection == 'publications' %}
-      <p class="archive__item-meta">Published in&nbsp; {{ post.venue }} / {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
+      <p class="archive__item-meta archive__item-meta--publication">
+        <span>Published in</span>
+        <strong>{{ post.venue | strip_html }}</strong>
+        <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%Y" }}</time>
+      </p>
     {% elsif post.date %}
       <p class="archive__item-meta"><time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
     {% endif %}
@@ -48,12 +52,16 @@
       </div>
     {% endif %}
 
-    {% if post.collection == 'publications' or post.collection == 'portfolio' %}
+    {% if post.collection == 'publications' %}
       <p class="archive__item-actions">
+        <a class="archive__action--primary" href="{{ base_path }}{{ post.url }}" rel="permalink">Details</a>
         {% if post.paperurl %}<a href="{{ post.paperurl }}">Download paper</a>{% endif %}
         {% if post.slidesurl %}<a href="{{ post.slidesurl }}">Slides</a>{% endif %}
         {% if post.bibtexurl %}<a href="{{ post.bibtexurl }}">BibTeX</a>{% endif %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">Details</a>
+      </p>
+    {% elsif post.collection == 'portfolio' %}
+      <p class="archive__item-actions">
+        <a class="archive__action--primary" href="{{ base_path }}{{ post.url }}" rel="permalink">Details</a>
       </p>
     {% elsif post.citation and post.paperurl and post.slidesurl and post.bibtexurl %}
       <p class="archive__item-actions"><a href="{{ post.paperurl }}">Paper</a><a href="{{ post.slidesurl }}">Slides</a><a href="{{ post.bibtexurl }}">BibTeX</a></p>
