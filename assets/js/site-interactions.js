@@ -174,7 +174,7 @@
         terminalLine("out", "  WM         Embodied AI + HRI"),
         terminalLine("out", "  CPU        Milk-Tea-powered  @  ∞ MHz"),
         terminalUptimeLine(),
-        terminalLine("out", "  State:     PhD in Progress"),
+        terminalLine("out", "  Status:    PhD in Progress"),
         terminalLine("out", "  Memory     Context · Feedback · Humans"),
         terminalLine("link", "  GitHub     github.com/hsiang-fu", "https://github.com/hsiang-fu", true),
         terminalLine("link", "  Scholar    research profile", "https://scholar.google.com/citations?user=R7oQL2UAAAAJ&hl=en", true),
