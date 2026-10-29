@@ -461,15 +461,24 @@
       document.body.classList.add("cursor-visible");
     });
 
+    var interactiveCursorSelector = "a, button, input, textarea, select, [role='button'], [data-terminal-window]";
+
     document.addEventListener("mouseover", function (event) {
-      if (event.target.closest("a, button, input, textarea, select, [role='button']")) {
+      var target = event.target.closest(interactiveCursorSelector);
+      if (target) {
         document.body.classList.add("cursor-active");
+        document.body.classList.toggle("cursor-terminal", Boolean(target.closest("[data-terminal-window]")));
       }
     });
 
     document.addEventListener("mouseout", function (event) {
-      if (event.target.closest("a, button, input, textarea, select, [role='button']")) {
+      var target = event.target.closest(interactiveCursorSelector);
+      var nextTarget = event.relatedTarget && event.relatedTarget.closest ? event.relatedTarget.closest(interactiveCursorSelector) : null;
+      if (target && !nextTarget) {
         document.body.classList.remove("cursor-active");
+        document.body.classList.remove("cursor-terminal");
+      } else if (nextTarget) {
+        document.body.classList.toggle("cursor-terminal", Boolean(nextTarget.closest("[data-terminal-window]")));
       }
     });
 
@@ -480,7 +489,7 @@
       document.body.classList.remove("cursor-pressed");
     });
     document.documentElement.addEventListener("mouseleave", function () {
-      document.body.classList.remove("cursor-visible", "cursor-active", "cursor-pressed");
+      document.body.classList.remove("cursor-visible", "cursor-active", "cursor-terminal", "cursor-pressed");
     });
 
     renderCursor();

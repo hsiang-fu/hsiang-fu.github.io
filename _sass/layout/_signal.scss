@@ -1499,7 +1499,7 @@ body.is-homepage-copy-protected {
     pointer-events: none;
     opacity: 0;
     transform: translate3d(-50%, -50%, 0);
-    transition: width 180ms ease, height 180ms ease, opacity 180ms ease, background-color 180ms ease, border-color 180ms ease;
+    transition: width 180ms ease, height 180ms ease, opacity 180ms ease, background-color 180ms ease, border-color 180ms ease, border-radius 180ms ease;
   }
 
   .signal-cursor-dot {
@@ -1531,6 +1531,21 @@ body.is-homepage-copy-protected {
     width: 46px;
     height: 46px;
     border-color: var(--signal-accent-2);
+    background: var(--signal-accent-soft);
+  }
+
+  body.has-signal-cursor.cursor-terminal .signal-cursor-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 1px;
+    background: var(--signal-accent);
+  }
+
+  body.has-signal-cursor.cursor-terminal .signal-cursor-ring {
+    width: 36px;
+    height: 36px;
+    border-color: var(--signal-accent);
+    border-radius: 3px;
     background: var(--signal-accent-soft);
   }
 
@@ -2394,16 +2409,19 @@ body {
   display: flex;
   flex: 0 0 auto;
   gap: 0.4rem;
-  align-items: center;
+  align-items: baseline;
   margin-top: 0.5rem;
   padding: 0.5rem 0 0;
   border-top: 1px solid var(--signal-line-soft);
   font-family: "IBM Plex Mono", monospace;
+  font-size: 12.5px;
+  line-height: 1.7;
 }
 
 .signal-terminal__form .signal-prompt {
   flex: 0 0 auto;
   font-size: 12.5px;
+  line-height: 1.7;
 }
 
 .signal-terminal__form input {
@@ -2419,6 +2437,7 @@ body {
   font-family: "IBM Plex Mono", monospace;
   font-size: 12.5px;
   line-height: 1.7;
+  vertical-align: baseline;
 }
 
 .signal-terminal__form input:focus {
