@@ -19,7 +19,7 @@ redirect_from:
     <div class="field-hero__canvas">
       <div class="field-hero__copy">
         <p class="field-label">Computer Science Ph.D. / Arizona State University</p>
-        <h1 id="home-title">I TEACH ROBOTS TO LEARN FROM <span>CONTEXT, FEEDBACK,</span> and <span>HUMANS</span></h1>
+        <h1 id="home-title">I TEACH ROBOTS TO LEARN FROM <span>CONTEXT</span>, <span>FEEDBACK</span>, and <span>HUMANS</span></h1>
       </div>
 
       <aside class="field-hero__legend" aria-label="Current research coordinates">
