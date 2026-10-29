@@ -79,13 +79,6 @@ redirect_from:
     </div>
   </section>
 
-  <div class="field-principles" aria-label="Research principles">
-    <span>Context over assumptions</span>
-    <span>Feedback over guesswork</span>
-    <span>People inside the loop</span>
-    <span>Reality as the benchmark</span>
-  </div>
-
   <section class="field-section field-about" id="about" aria-labelledby="about-heading">
     <header class="field-section__heading">
       <p>01</p>

@@ -3765,31 +3765,6 @@ body {
   border-bottom: 0;
 }
 
-.field-principles {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-top: 1px solid var(--signal-line);
-  border-bottom: 1px solid var(--signal-line);
-}
-
-.field-principles span {
-  display: flex;
-  min-height: 5rem;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  border-right: 1px solid var(--signal-line);
-  color: var(--signal-text);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.66rem;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.field-principles span:last-child {
-  border-right: 0;
-}
-
 .field-section {
   padding: 8rem 0 0;
   scroll-margin-top: 6rem;
@@ -4575,18 +4550,6 @@ body {
     margin-top: 1rem;
   }
 
-  .field-principles {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .field-principles span:nth-child(2) {
-    border-right: 0;
-  }
-
-  .field-principles span:nth-child(-n + 2) {
-    border-bottom: 1px solid var(--signal-line);
-  }
-
   .field-section {
     padding-top: 6.5rem;
   }
@@ -4763,24 +4726,8 @@ body {
     padding: 1.1rem;
   }
 
-  .field-principles {
-    grid-template-columns: 1fr;
-    margin-top: 2rem;
-  }
-
-  .field-principles span,
-  .field-principles span:nth-child(n) {
-    min-height: 3.6rem;
-    border-right: 0;
-    border-bottom: 1px solid var(--signal-line);
-  }
-
   .field-work__feature:nth-child(n + 2) {
     border-top: 0;
-  }
-
-  .field-principles span:last-child {
-    border-bottom: 0;
   }
 
   .field-section {
