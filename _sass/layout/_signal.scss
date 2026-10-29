@@ -3444,7 +3444,11 @@ body {
   grid-template-columns: minmax(0, 1fr) minmax(13rem, 18rem);
   gap: clamp(2rem, 4vw, 4.5rem);
   align-items: start;
-  padding: 3rem 0 4rem;
+  padding: 3rem 0 2.5rem;
+}
+
+.field-section.field-research {
+  padding-top: 3.5rem;
 }
 
 .field-about__content {
