@@ -3419,7 +3419,7 @@ body {
 
 .field-about__body {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.5fr);
+  grid-template-columns: minmax(0, 1fr) minmax(13rem, 18rem);
   gap: clamp(2rem, 4vw, 4.5rem);
   align-items: start;
   padding: 3rem 0 4rem;
@@ -4399,7 +4399,7 @@ body {
   }
 
   .field-about__portrait {
-    width: min(22rem, 82%);
+    width: min(18rem, 72%);
   }
 
   .field-research__list article {
