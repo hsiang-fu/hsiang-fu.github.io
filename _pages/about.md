@@ -59,10 +59,8 @@ redirect_from:
   </section>
 
   <section class="signal-section signal-about" id="about" aria-labelledby="about-heading">
-    <header class="signal-section__header">
-      <p><span>/01</span> About me</p>
-      <h2 id="about-heading">Learning systems for the real world.</h2>
-      <p>My work connects machine learning, human-centered design, and embodied intelligence.</p>
+    <header class="signal-section__header signal-section__header--simple">
+      <h2 id="about-heading"><span>/01</span> About Me</h2>
     </header>
 
     <div class="signal-about__grid">
