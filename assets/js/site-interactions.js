@@ -122,7 +122,7 @@
         terminalLine("out", "  Host       Arizona State University"),
         terminalLine("out", "  Shell      Robot learning research"),
         terminalLine("out", "  WM         Embodied AI + HRI"),
-        terminalLine("out", "  CPU        Coffee-powered  @  ∞ MHz"),
+        terminalLine("out", "  CPU        Milk-Tea-powered  @  ∞ MHz"),
         terminalLine("out", "  Uptime     Ph.D. in progress"),
         terminalLine("out", "  Memory     Context · Feedback · Humans"),
         terminalLine("link", "  GitHub     github.com/hsiang-fu", "https://github.com/hsiang-fu", true),
