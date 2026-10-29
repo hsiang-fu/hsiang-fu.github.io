@@ -86,10 +86,8 @@ redirect_from:
   </section>
 
   <section class="signal-section" id="research" aria-labelledby="research-heading">
-    <header class="signal-section__header">
-      <p><span>/02</span> Research directions</p>
-      <h2 id="research-heading">How I think about robot intelligence.</h2>
-      <p>Five connected directions for building systems that stay useful under uncertainty.</p>
+    <header class="signal-section__header signal-section__header--simple">
+      <h2 id="research-heading"><span>/02</span> Research Directions</h2>
     </header>
 
     <div class="signal-capabilities">
