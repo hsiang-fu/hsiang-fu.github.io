@@ -3653,11 +3653,12 @@ body {
 }
 
 .field-work__heading p {
-  grid-column: 1 / 4;
+  grid-column: 1 / 7;
   margin: 0;
   color: var(--signal-accent);
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.66rem;
+  font-size: 1rem;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
