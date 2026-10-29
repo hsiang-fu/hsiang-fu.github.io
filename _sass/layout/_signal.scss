@@ -325,7 +325,7 @@ a {
 
 .signal-hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.98fr) minmax(30rem, 1.02fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: auto auto auto;
   column-gap: clamp(3rem, 4.5vw, 5rem);
   min-height: calc(100vh - 4.6rem);
@@ -1541,7 +1541,7 @@ a {
   }
 
   .signal-hero {
-    grid-template-columns: minmax(0, 0.84fr) minmax(27rem, 1.16fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 3rem;
   }
 
