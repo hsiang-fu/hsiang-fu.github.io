@@ -1930,3 +1930,488 @@ body.is-homepage-copy-protected {
     width: fit-content;
   }
 }
+
+/* Full-screen homepage and three-part navigation */
+
+body {
+  padding-top: 72px !important;
+}
+
+.masthead__inner-wrap,
+.signal-home {
+  width: min(1480px, calc(100% - 3rem));
+}
+
+.masthead__menu,
+.greedy-nav {
+  min-height: 72px;
+  height: 72px;
+}
+
+.greedy-nav .visible-links {
+  display: grid;
+  grid-template-columns: minmax(11rem, 1fr) auto minmax(11rem, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+  width: 100%;
+  height: 72px;
+  margin: 0;
+  padding: 0;
+}
+
+.greedy-nav .visible-links > li {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  list-style: none;
+}
+
+.greedy-nav .visible-links li:first-child {
+  margin-right: 0;
+  justify-self: start;
+}
+
+.masthead__menu-item--primary {
+  justify-self: center;
+}
+
+.masthead__menu-item--actions {
+  justify-self: end;
+}
+
+.signal-nav-links,
+.signal-nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.signal-nav-links {
+  gap: clamp(0.9rem, 1.45vw, 1.55rem);
+}
+
+.greedy-nav .visible-links .signal-nav-link {
+  display: inline-flex;
+  gap: 0.42rem;
+  align-items: center;
+  margin: 0;
+  padding: 0.6rem 0;
+  border-radius: 0;
+  color: var(--signal-muted);
+  background: transparent;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.62rem;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+}
+
+.greedy-nav .visible-links .signal-nav-link span {
+  color: var(--signal-accent);
+  font-size: 0.58rem;
+  opacity: 0.78;
+}
+
+.greedy-nav .visible-links .signal-nav-link:hover,
+.greedy-nav .visible-links .signal-nav-link.is-active {
+  color: var(--signal-text);
+  background: transparent;
+  transform: none;
+}
+
+.signal-nav-actions {
+  gap: 0.85rem;
+}
+
+.greedy-nav .visible-links .signal-nav-actions a.mobile-nav-toggle {
+  display: none;
+}
+
+.greedy-nav .visible-links .signal-nav-cv {
+  margin: 0;
+  padding: 0.65rem 0.25rem;
+  color: var(--signal-muted);
+  background: transparent;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.62rem;
+  line-height: 1;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+}
+
+.greedy-nav .visible-links .signal-nav-cv:hover {
+  color: var(--signal-text);
+  background: transparent;
+  transform: none;
+}
+
+.greedy-nav .visible-links .signal-nav-contact {
+  display: inline-flex;
+  min-width: 8rem;
+  height: 44px;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0 1rem;
+  border: 1px solid var(--signal-accent);
+  border-radius: 2px;
+  color: var(--signal-on-accent);
+  background: var(--signal-accent);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.62rem;
+  line-height: 1;
+  text-transform: uppercase;
+  transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.greedy-nav .visible-links .signal-nav-contact:hover {
+  color: var(--signal-accent);
+  background: transparent;
+  transform: translateY(-1px);
+}
+
+.greedy-nav .visible-links .theme-toggle,
+.greedy-nav .visible-links .mobile-nav-toggle {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+}
+
+.signal-hero.signal-hero--fullscreen {
+  display: flex;
+  min-height: calc(100dvh - 72px);
+  flex-direction: column;
+  justify-content: space-between;
+  gap: clamp(0.85rem, 2vh, 1.5rem);
+  padding: clamp(1rem, 2vh, 1.5rem) 0;
+}
+
+.signal-hero--fullscreen .signal-statusbar,
+.signal-hero--fullscreen .signal-hero__headline,
+.signal-hero--fullscreen .signal-hero__lower,
+.signal-hero--fullscreen .signal-hero__intro,
+.signal-hero--fullscreen .signal-console {
+  grid-column: auto;
+  grid-row: auto;
+}
+
+.signal-hero--fullscreen .signal-statusbar {
+  flex: 0 0 auto;
+}
+
+.signal-hero--fullscreen .signal-hero__headline {
+  flex: 1 1 auto;
+  padding: clamp(0.5rem, 1.5vh, 1rem) 0;
+  border-bottom: 0;
+}
+
+.signal-hero--fullscreen .signal-kicker {
+  margin-bottom: clamp(0.8rem, 1.8vh, 1.25rem);
+}
+
+.signal-hero--fullscreen h1 {
+  max-width: none;
+  font-size: clamp(3.2rem, 6.2vw, 6.6rem);
+  line-height: 0.87;
+}
+
+.signal-hero--fullscreen .signal-hero__lower {
+  display: grid;
+  flex: 0 0 auto;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: end;
+  padding-top: clamp(0.7rem, 1.6vh, 1rem);
+  border-top: 1px solid var(--signal-line);
+}
+
+.signal-hero--fullscreen .signal-hero__intro {
+  grid-column: 1 / span 5;
+  padding-top: 0;
+}
+
+.signal-hero--fullscreen .signal-hero__intro > p {
+  max-width: 44ch;
+  font-size: clamp(0.95rem, 1.15vw, 1.08rem);
+  line-height: 1.65;
+}
+
+.signal-hero--fullscreen .signal-actions {
+  margin-top: clamp(1rem, 2vh, 1.4rem);
+}
+
+.signal-hero--fullscreen .signal-button {
+  min-height: 44px;
+}
+
+.signal-hero--fullscreen .signal-metrics {
+  margin-top: clamp(0.9rem, 2vh, 1.3rem);
+}
+
+.signal-hero--fullscreen .signal-metrics div {
+  padding-top: 0.55rem;
+  padding-bottom: 0.5rem;
+}
+
+.signal-hero--fullscreen .signal-metrics dt {
+  font-size: 1.05rem;
+}
+
+.signal-hero--fullscreen .signal-console {
+  grid-column: 7 / -1;
+  align-self: end;
+  width: 100%;
+  margin-top: 0;
+}
+
+.signal-console__links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.signal-console__links a {
+  color: var(--signal-muted);
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.signal-console__links a:hover {
+  color: var(--signal-accent);
+}
+
+.signal-hero--fullscreen .signal-console__window {
+  display: flex;
+  min-height: 12rem;
+  height: clamp(12rem, 24vh, 14rem);
+  flex-direction: column;
+  cursor: text;
+}
+
+.signal-hero--fullscreen .signal-console__chrome {
+  min-height: 2.5rem;
+  flex: 0 0 2.5rem;
+}
+
+.signal-console__chrome > span {
+  display: inline-flex;
+  gap: 0.42rem;
+}
+
+.signal-console__chrome strong {
+  margin-left: 0.45rem;
+  font-weight: 400;
+}
+
+.signal-console__chrome small {
+  margin-left: auto;
+  font-size: 0.58rem;
+}
+
+.signal-terminal__output {
+  display: flex;
+  min-height: 0;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 0.65rem;
+  overflow-y: auto;
+  padding: 1rem 1.2rem 0.7rem;
+  scrollbar-color: var(--signal-line) transparent;
+  scrollbar-width: thin;
+}
+
+.signal-terminal__entry {
+  display: grid;
+  gap: 0.18rem;
+  color: var(--signal-muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+
+.signal-terminal__entry--command {
+  display: block;
+  color: var(--signal-text);
+}
+
+.signal-terminal__entry--command::before {
+  margin-right: 0.55rem;
+  color: var(--signal-accent);
+  content: "$";
+}
+
+.signal-terminal__entry--error {
+  color: var(--signal-accent-2);
+}
+
+.signal-terminal__entry strong,
+.signal-terminal__entry a {
+  color: var(--signal-text);
+}
+
+.signal-terminal__entry a {
+  width: fit-content;
+  text-decoration: underline;
+  text-decoration-color: var(--signal-line);
+  text-underline-offset: 0.22rem;
+}
+
+.signal-terminal__form {
+  display: grid;
+  flex: 0 0 2.8rem;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0.65rem;
+  align-items: center;
+  min-height: 2.8rem;
+  padding: 0 0.75rem 0 1.2rem;
+  border-top: 1px solid var(--signal-line-soft);
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.signal-terminal__form input {
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  color: var(--signal-text);
+  background: transparent;
+  box-shadow: none;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.7rem;
+}
+
+.signal-terminal__form input::placeholder {
+  color: var(--signal-faint);
+}
+
+.signal-terminal__form button {
+  min-height: 1.9rem;
+  padding: 0 0.7rem;
+  border: 1px solid var(--signal-line);
+  border-radius: 2px;
+  color: var(--signal-muted);
+  background: transparent;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.signal-terminal__form button:hover {
+  border-color: var(--signal-accent);
+  color: var(--signal-on-accent);
+  background: var(--signal-accent);
+}
+
+@media (max-width: 1180px) {
+  .greedy-nav .visible-links {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .masthead__menu-item--primary,
+  .signal-nav-cv,
+  .signal-nav-contact {
+    display: none !important;
+  }
+
+  .masthead__menu-item--actions {
+    grid-column: 2;
+  }
+
+  .masthead__menu-item--mobile,
+  .greedy-nav .visible-links .signal-nav-actions a.mobile-nav-toggle {
+    display: grid !important;
+  }
+
+  .mobile-nav-panel {
+    top: 72px;
+  }
+
+  .signal-hero--fullscreen h1 {
+    font-size: clamp(3.1rem, 7.4vw, 5.4rem);
+  }
+}
+
+@media (max-width: 900px) {
+  .masthead__inner-wrap,
+  .signal-home {
+    width: min(100% - 2rem, 760px);
+  }
+
+  .signal-hero.signal-hero--fullscreen {
+    min-height: auto;
+  }
+
+  .signal-hero--fullscreen .signal-hero__lower {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .signal-hero--fullscreen .signal-hero__intro,
+  .signal-hero--fullscreen .signal-console {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 680px) {
+  body {
+    padding-top: 64px !important;
+  }
+
+  .masthead__inner-wrap,
+  .signal-home {
+    width: calc(100% - 1.25rem);
+  }
+
+  .masthead__menu,
+  .greedy-nav,
+  .greedy-nav .visible-links {
+    min-height: 64px;
+    height: 64px;
+  }
+
+  .mobile-nav-panel {
+    top: 64px;
+  }
+
+  .signal-nav-actions {
+    gap: 0.55rem;
+  }
+
+  .greedy-nav .visible-links .theme-toggle,
+  .greedy-nav .visible-links .mobile-nav-toggle {
+    flex-basis: 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .signal-hero.signal-hero--fullscreen {
+    padding-top: 1.15rem;
+  }
+
+  .signal-hero--fullscreen .signal-hero__headline {
+    padding: 2.2rem 0 2.5rem;
+  }
+
+  .signal-hero--fullscreen h1 {
+    font-size: clamp(2.65rem, 12.7vw, 4.2rem);
+    line-height: 0.9;
+  }
+
+  .signal-console__topline {
+    align-items: flex-start;
+  }
+
+  .signal-console__links {
+    display: none;
+  }
+
+  .signal-hero--fullscreen .signal-console__window {
+    height: 17rem;
+  }
+}

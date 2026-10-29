@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 <main class="signal-home">
-  <section class="signal-hero" aria-labelledby="home-title">
+  <section class="signal-hero signal-hero--fullscreen" aria-labelledby="home-title">
     <div class="signal-statusbar" aria-label="Profile status">
       <span><i aria-hidden="true"></i> Robot learning / Embodied AI / HRI</span>
       <span>Phoenix, AZ · UTC-7</span>
@@ -17,42 +17,45 @@ redirect_from:
 
     <div class="signal-hero__headline">
       <p class="signal-kicker">Hi, I'm Sean. / Computer Science Ph.D. student</p>
-      <h1 id="home-title">ROBOTS THAT LEARN<br><span>FROM CONTEXT,</span><br>FEEDBACK, AND HUMANS.</h1>
+      <h1 id="home-title">ROBOTS THAT LEARN<br><span>FROM CONTEXT, FEEDBACK,</span><br>AND HUMANS.</h1>
     </div>
 
     <div class="signal-hero__lower">
       <div class="signal-hero__intro">
         <p>I build learning-driven robotic systems that perceive, adapt, and collaborate in uncertain real-world environments.</p>
         <div class="signal-actions" aria-label="Primary links">
-          <a class="signal-button signal-button--solid" href="/publications/">View publications <span aria-hidden="true">↘</span></a>
-          <a class="signal-button" href="/projects/">Explore projects</a>
+          <a class="signal-button signal-button--solid" href="/projects/">View my work <span aria-hidden="true">↘</span></a>
         </div>
 
         <dl class="signal-metrics" aria-label="Academic profile summary">
-          <div><dt>Ph.D.</dt><dd>Computer Science</dd></div>
-          <div><dt>ASU</dt><dd>Interactive Robotics Lab</dd></div>
+          <div><dt>1</dt><dd>Published paper</dd></div>
           <div><dt>5</dt><dd>Research directions</dd></div>
+          <div><dt>3</dt><dd>Active themes</dd></div>
         </dl>
       </div>
 
-      <div class="signal-console" data-console>
+      <div class="signal-console" data-terminal>
         <div class="signal-console__topline">
-          <span>Current work / select a lens</span>
-          <span class="signal-console__status">Live research</span>
-        </div>
-        <div class="signal-console__window" aria-live="polite">
-          <div class="signal-console__chrome" aria-hidden="true"><i></i><i></i><i></i><span>sean@robot-lab — research</span></div>
-          <div class="signal-console__content">
-            <p><span class="signal-prompt">$</span> focus --active</p>
-            <span class="signal-console__label" data-console-label>Embodied Learning</span>
-            <h2 data-console-title>Learning policies from demonstration-rich data</h2>
-            <p data-console-body>Robots should turn examples into behavior that survives noisy environments, incomplete instructions, and changing human goals.</p>
+          <span>Interactive terminal / click to try</span>
+          <div class="signal-console__links">
+            <a href="https://github.com/manan-santoki/browserpilot" target="_blank" rel="noreferrer">BrowserPilot <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/manan-santoki/github-orbit" target="_blank" rel="noreferrer">GitHub Orbit <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-        <div class="signal-console__controls" role="group" aria-label="Research topic selector">
-          <button type="button" class="is-active" data-console-topic="embodied"><span>01</span> Embodied learning</button>
-          <button type="button" data-console-topic="collab"><span>02</span> Collaboration</button>
-          <button type="button" data-console-topic="multimodal"><span>03</span> Multimodal AI</button>
+        <div class="signal-console__window" data-terminal-window>
+          <div class="signal-console__chrome"><span aria-hidden="true"><i></i><i></i><i></i></span><strong>sean@robot-lab — terminal</strong><small>click to interact</small></div>
+          <div class="signal-terminal__output" data-terminal-output aria-live="polite">
+            <div class="signal-terminal__entry signal-terminal__entry--system">
+              <span>Research interface ready.</span>
+              <span>Type <strong>help</strong> to see available commands.</span>
+            </div>
+          </div>
+          <form class="signal-terminal__form" data-terminal-form>
+            <label for="research-terminal-input" class="sr-only">Terminal command</label>
+            <span class="signal-prompt" aria-hidden="true">$</span>
+            <input id="research-terminal-input" data-terminal-input type="text" inputmode="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="type a command">
+            <button type="submit">Run</button>
+          </form>
         </div>
       </div>
     </div>

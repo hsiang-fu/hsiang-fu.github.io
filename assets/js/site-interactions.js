@@ -1,39 +1,139 @@
 (function () {
-  var topics = {
-    embodied: {
-      label: "Embodied Learning",
-      title: "Learning policies from demonstration-rich data",
-      body: "Robots should turn examples into behavior that survives contact with noisy environments, incomplete instructions, and changing human goals."
+  var terminalCommands = {
+    help: {
+      lines: [
+        "Available: about, research, publications, projects, browserpilot, github-orbit, contact, theme, clear",
+        "Use the up and down arrows to revisit command history."
+      ]
     },
-    collab: {
-      label: "Human-Robot Collaboration",
-      title: "Building loops where people stay in the system",
-      body: "The goal is not only autonomy. It is collaboration: systems that infer intent, expose uncertainty, and adapt around human workflows."
+    about: {
+      lines: [
+        "Sean Fu — Computer Science Ph.D. student at Arizona State University.",
+        "Building learning-driven robots for uncertain, human environments."
+      ]
     },
-    multimodal: {
-      label: "Multimodal Robot AI",
-      title: "Connecting language, vision, control, and action",
-      body: "Generative and multimodal models can become interfaces between messy sensory inputs and grounded robot decisions."
+    research: {
+      lines: ["In-context learning / reward models / agentic AI / reinforcement learning / HRI"],
+      link: { label: "Open research directions ↗", href: "/research/" }
+    },
+    publications: {
+      lines: ["Research outputs in multimodal learning, robot intelligence, and human-centered AI."],
+      link: { label: "Open publications ↗", href: "/publications/" }
+    },
+    projects: {
+      lines: ["Applied robotics and machine-learning systems built around real constraints."],
+      link: { label: "Open projects ↗", href: "/projects/" }
+    },
+    browserpilot: {
+      lines: ["A site-agnostic AI agent runtime for operating a real headless browser with live preview and approval gates."],
+      link: { label: "View BrowserPilot on GitHub ↗", href: "https://github.com/manan-santoki/browserpilot", external: true }
+    },
+    "github-orbit": {
+      lines: ["A self-hosted GitHub network explorer with explainable recommendations and infinite-canvas graph navigation."],
+      link: { label: "View GitHub Orbit on GitHub ↗", href: "https://github.com/manan-santoki/github-orbit", external: true }
+    },
+    contact: {
+      lines: ["Email: hsiangfu@asu.edu"],
+      link: { label: "Open contact section ↗", href: "/#contact" }
     }
   };
 
-  function updateConsole(key, root) {
-    var topic = topics[key] || topics.embodied;
-    var windowPanel = root.querySelector(".signal-console__window");
-    windowPanel.classList.add("is-updating");
+  function appendTerminalEntry(output, type, lines, link) {
+    var entry = document.createElement("div");
+    entry.className = "signal-terminal__entry" + (type ? " signal-terminal__entry--" + type : "");
 
-    root.querySelectorAll("[data-console-topic]").forEach(function (button) {
-      var isActive = button.getAttribute("data-console-topic") === key;
-      button.classList.toggle("is-active", isActive);
-      button.setAttribute("aria-pressed", isActive ? "true" : "false");
+    lines.forEach(function (line) {
+      var row = document.createElement("span");
+      row.textContent = line;
+      entry.appendChild(row);
     });
 
-    window.setTimeout(function () {
-      root.querySelector("[data-console-label]").textContent = topic.label;
-      root.querySelector("[data-console-title]").textContent = topic.title;
-      root.querySelector("[data-console-body]").textContent = topic.body;
-      windowPanel.classList.remove("is-updating");
-    }, 140);
+    if (link) {
+      var anchor = document.createElement("a");
+      anchor.href = link.href;
+      anchor.textContent = link.label;
+      if (link.external) {
+        anchor.target = "_blank";
+        anchor.rel = "noreferrer";
+      }
+      entry.appendChild(anchor);
+    }
+
+    output.appendChild(entry);
+  }
+
+  function initResearchTerminal() {
+    var root = document.querySelector("[data-terminal]");
+    if (!root) return;
+
+    var form = root.querySelector("[data-terminal-form]");
+    var input = root.querySelector("[data-terminal-input]");
+    var output = root.querySelector("[data-terminal-output]");
+    var windowPanel = root.querySelector("[data-terminal-window]");
+    var history = [];
+    var historyIndex = 0;
+
+    function scrollToLatest() {
+      output.scrollTop = output.scrollHeight;
+    }
+
+    function runCommand(value) {
+      var rawCommand = value.trim();
+      if (!rawCommand) return;
+
+      history.push(rawCommand);
+      historyIndex = history.length;
+      appendTerminalEntry(output, "command", [rawCommand]);
+
+      var command = rawCommand.toLowerCase();
+      if (command === "clear") {
+        output.textContent = "";
+        return;
+      }
+
+      if (command === "theme") {
+        var themeToggle = document.getElementById("theme-toggle");
+        if (themeToggle) themeToggle.click();
+        appendTerminalEntry(output, "system", ["Theme switched."]);
+        scrollToLatest();
+        return;
+      }
+
+      if (command === "whoami") command = "about";
+      if (command === "ls" || command === "commands") command = "help";
+
+      var result = terminalCommands[command];
+      if (result) {
+        appendTerminalEntry(output, "system", result.lines, result.link);
+      } else {
+        appendTerminalEntry(output, "error", ["Command not found: " + rawCommand, "Type help for available commands."]);
+      }
+      scrollToLatest();
+    }
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      runCommand(input.value);
+      input.value = "";
+      input.focus();
+    });
+
+    input.addEventListener("keydown", function (event) {
+      if (event.key === "ArrowUp" && history.length) {
+        event.preventDefault();
+        historyIndex = Math.max(0, historyIndex - 1);
+        input.value = history[historyIndex];
+      }
+      if (event.key === "ArrowDown" && history.length) {
+        event.preventDefault();
+        historyIndex = Math.min(history.length, historyIndex + 1);
+        input.value = historyIndex === history.length ? "" : history[historyIndex];
+      }
+    });
+
+    windowPanel.addEventListener("click", function (event) {
+      if (!event.target.closest("a, button")) input.focus();
+    });
   }
 
   function initSignalCursor() {
@@ -119,15 +219,7 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    var consoleRoot = document.querySelector("[data-console]");
-    if (consoleRoot) {
-      consoleRoot.querySelectorAll("[data-console-topic]").forEach(function (button) {
-        button.setAttribute("aria-pressed", button.classList.contains("is-active") ? "true" : "false");
-        button.addEventListener("click", function () {
-          updateConsole(button.getAttribute("data-console-topic"), consoleRoot);
-        });
-      });
-    }
+    initResearchTerminal();
 
     var themeToggle = document.getElementById("theme-toggle");
     var themeIcon = document.getElementById("theme-icon");
