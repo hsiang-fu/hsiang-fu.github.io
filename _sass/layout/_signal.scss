@@ -18,6 +18,10 @@
   --signal-accent-soft: rgba(49, 92, 232, 0.09);
   --signal-accent-2-soft: rgba(49, 92, 232, 0.09);
   --signal-on-accent: #ffffff;
+  --signal-cursor: #ef476f;
+  --signal-cursor-soft: rgba(239, 71, 111, 0.2);
+  --signal-cursor-edge-light: rgba(255, 255, 255, 0.95);
+  --signal-cursor-edge-dark: rgba(16, 20, 29, 0.72);
   --signal-shadow: 0 18px 55px rgba(28, 45, 91, 0.1);
   --signal-header: rgba(243, 246, 251, 0.9);
   --site-accent: #315ce8;
@@ -45,6 +49,10 @@ html[data-theme="dark"] {
   --signal-accent-soft: rgba(145, 168, 255, 0.12);
   --signal-accent-2-soft: rgba(145, 168, 255, 0.11);
   --signal-on-accent: #11141b;
+  --signal-cursor: #ff7295;
+  --signal-cursor-soft: rgba(255, 114, 149, 0.22);
+  --signal-cursor-edge-light: rgba(255, 255, 255, 0.92);
+  --signal-cursor-edge-dark: rgba(7, 8, 12, 0.82);
   --signal-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
   --signal-header: rgba(21, 22, 27, 0.9);
   --site-accent: #91a8ff;
@@ -2106,21 +2114,26 @@ body.has-signal-cursor.cursor-terminal * {
   }
 
   .signal-cursor-dot {
-    width: 7px;
-    height: 10px;
+    width: 9px;
+    height: 13px;
     border-radius: 0;
-    background: var(--signal-accent);
+    background: var(--signal-cursor);
     clip-path: polygon(0 0, 100% 50%, 0 100%);
+    filter:
+      drop-shadow(0 0 1px var(--signal-cursor-edge-light))
+      drop-shadow(0 0 2px var(--signal-cursor-edge-dark));
   }
 
   .signal-cursor-ring {
-    width: 18px;
-    height: 22px;
+    width: 22px;
+    height: 28px;
     border: 0;
     border-radius: 0;
-    background: color-mix(in srgb, var(--signal-accent) 10%, transparent);
+    background: var(--signal-cursor-soft);
     clip-path: polygon(0 0, 100% 50%, 0 100%);
-    filter: drop-shadow(0 0 1px var(--signal-accent));
+    filter:
+      drop-shadow(0 0 1px var(--signal-cursor-edge-light))
+      drop-shadow(0 0 3px var(--signal-cursor-edge-dark));
   }
 
   body.has-signal-cursor.cursor-visible .signal-cursor-dot,
@@ -2129,16 +2142,18 @@ body.has-signal-cursor.cursor-terminal * {
   }
 
   body.has-signal-cursor.cursor-active .signal-cursor-dot {
-    width: 9px;
-    height: 12px;
-    background: var(--signal-accent-2);
+    width: 11px;
+    height: 15px;
+    background: var(--signal-cursor);
   }
 
   body.has-signal-cursor.cursor-active .signal-cursor-ring {
-    width: 28px;
-    height: 34px;
-    background: var(--signal-accent-soft);
-    filter: drop-shadow(0 0 2px var(--signal-accent-2));
+    width: 32px;
+    height: 40px;
+    background: var(--signal-cursor-soft);
+    filter:
+      drop-shadow(0 0 1px var(--signal-cursor-edge-light))
+      drop-shadow(0 0 4px var(--signal-cursor-edge-dark));
   }
 
   body.has-signal-cursor [data-terminal-window],
@@ -2151,15 +2166,18 @@ body.has-signal-cursor.cursor-terminal * {
   }
 
   body.has-signal-cursor.cursor-terminal .signal-cursor-ring {
-    width: 2px;
+    width: 3px;
     height: 26px;
     border: 0;
     border-radius: 999px;
     opacity: 1;
-    background: var(--signal-accent);
+    background: var(--signal-cursor);
     clip-path: none;
     filter: none;
-    box-shadow: 0 0 0 1px color-mix(in srgb, var(--signal-accent) 16%, transparent), 0 0 10px color-mix(in srgb, var(--signal-accent) 55%, transparent);
+    box-shadow:
+      0 0 0 1px var(--signal-cursor-edge-light),
+      0 0 0 2px var(--signal-cursor-edge-dark),
+      0 0 12px var(--signal-cursor-soft);
   }
 
   body.has-signal-cursor.cursor-pressed .signal-cursor-ring {
