@@ -2790,12 +2790,14 @@ body {
   font-size: 0.62rem;
   line-height: 1;
   text-transform: uppercase;
-  transition: color 180ms ease;
+  transition: color 180ms ease, background-color 180ms ease;
 }
 
-.greedy-nav .visible-links .signal-nav-cv:hover {
+.greedy-nav .visible-links a.signal-nav-cv:not(.site-mark):not(.theme-toggle):hover {
   color: var(--signal-text);
-  background: transparent;
+  background: var(--signal-accent-soft);
+  border-radius: 6px;
+  box-shadow: none;
   transform: none;
 }
 
