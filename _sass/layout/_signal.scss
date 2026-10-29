@@ -3419,21 +3419,15 @@ body {
 
 .field-about__body {
   display: grid;
-  grid-template-columns: minmax(0, 0.75fr) minmax(16rem, 0.55fr) minmax(0, 0.7fr);
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.58fr);
   gap: clamp(2rem, 4vw, 4.5rem);
+  align-items: start;
   padding: 4rem 0 5rem;
-}
-
-.field-about__lead {
-  max-width: 24ch;
-  margin: 0;
-  color: var(--signal-text) !important;
-  font-size: 2rem;
-  line-height: 1.18;
 }
 
 .field-about__copy {
   display: flex;
+  max-width: 42rem;
   flex-direction: column;
   gap: 1.4rem;
 }
@@ -4179,10 +4173,6 @@ body {
     justify-self: end;
   }
 
-  .field-about__lead {
-    max-width: 28ch;
-  }
-
   .field-index {
     grid-template-columns: 1fr;
   }
@@ -4365,10 +4355,6 @@ body {
 
   .field-about__body {
     padding: 2.5rem 0 3rem;
-  }
-
-  .field-about__lead {
-    font-size: 1.55rem;
   }
 
   .field-about__copy {

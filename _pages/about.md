@@ -92,15 +92,14 @@ redirect_from:
       <h2 id="about-heading">About Me</h2>
     </header>
     <div class="field-about__body">
-      <p class="field-about__lead">I study learning systems for robots operating around uncertainty, incomplete instructions, and changing human goals.</p>
-      <figure class="field-about__portrait">
-        <img src="/images/sean-desert.jpg" alt="Hsiang Fu standing in a bright desert landscape" loading="lazy">
-        <figcaption><span>Phoenix, Arizona</span><span>ASU / CS Ph.D.</span></figcaption>
-      </figure>
       <div class="field-about__copy">
         <p>My research combines robot learning, in-context adaptation, reward models, reinforcement learning, and human-centered design. I am interested in systems that use demonstrations and multimodal feedback to improve without forgetting the person or environment they are meant to serve.</p>
         <p>Before ASU, I studied Human-Centered Data Science at the University of Texas at Austin. That background still shapes the questions I ask: not only whether a system works, but what it understands, how it adapts, and who it works for.</p>
       </div>
+      <figure class="field-about__portrait">
+        <img src="/images/sean-desert.jpg" alt="Hsiang Fu standing in a bright desert landscape" loading="lazy">
+        <figcaption><span>Phoenix, Arizona</span><span>ASU / CS Ph.D.</span></figcaption>
+      </figure>
     </div>
     <dl class="field-index" aria-label="Academic profile">
       <div><dt>Role / 01</dt><dd>Computer Science Ph.D. Student</dd></div>
