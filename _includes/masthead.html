@@ -6,23 +6,38 @@
       <nav id="site-nav" class="greedy-nav">
         <button class="hidden" aria-label="Open navigation menu"><div class="navicon"></div></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist"><a class="site-mark" href="{{ base_path }}/"><span>HF</span><strong>{{ site.title }}</strong></a></li>
+          <li class="masthead__menu-item masthead__menu-item--lg persist"><a class="site-mark" href="{{ base_path }}/"><span>HF/01</span><strong>{{ site.title }}</strong><i aria-hidden="true"></i></a></li>
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
             {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            <li class="masthead__menu-item"><a{% if page.url == link.url %} class="is-active"{% endif %} href="{{ domain }}{{ link.url }}"><span>0{{ forloop.index }}</span>{{ link.title }}</a></li>
           {% endfor %}
           <li class="masthead__menu-item masthead__menu-item--theme persist tail">
-            <a id="theme-toggle" class="theme-toggle" role="button" tabindex="0" aria-label="Toggle color theme" title="Toggle color theme">
+            <a id="theme-toggle" class="theme-toggle" href="#" role="button" aria-label="Toggle color theme" title="Toggle color theme">
               <i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="masthead__menu-item masthead__menu-item--mobile persist tail">
+            <a id="mobile-nav-toggle" class="mobile-nav-toggle" href="#" role="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav-panel">
+              <i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i>
             </a>
           </li>
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
+      <div id="mobile-nav-panel" class="mobile-nav-panel" aria-hidden="true">
+        {% for link in site.data.navigation.main %}
+          {% if link.url contains 'http' %}
+            {% assign mobile_domain = '' %}
+          {% else %}
+            {% assign mobile_domain = base_path %}
+          {% endif %}
+          <a{% if page.url == link.url %} class="is-active"{% endif %} href="{{ mobile_domain }}{{ link.url }}"><span>0{{ forloop.index }}</span><strong>{{ link.title }}</strong><i aria-hidden="true">↗</i></a>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
