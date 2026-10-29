@@ -17,7 +17,7 @@ redirect_from:
 
     <div class="signal-hero__headline">
       <p class="signal-kicker">Hi, I'm Sean. / Computer Science Ph.D. student</p>
-      <h1 id="home-title">ROBOTS THAT LEARN<br><span>FROM CONTEXT,</span><br>FEEDBACK, AND PEOPLE.</h1>
+      <h1 id="home-title">ROBOTS THAT LEARN<br><span>FROM CONTEXT,</span><br>FEEDBACK, AND HUMANS.</h1>
     </div>
 
     <div class="signal-hero__lower">
