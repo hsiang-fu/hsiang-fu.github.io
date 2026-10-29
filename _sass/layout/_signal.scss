@@ -3577,13 +3577,13 @@ body {
 }
 
 .field-research__intro p {
-  grid-column: 4 / 9;
+  grid-column: 2 / 8;
   margin: 0;
   line-height: 1.7;
 }
 
 .field-research__intro a {
-  grid-column: 10 / -1;
+  grid-column: 9 / -1;
   justify-self: end;
   color: var(--signal-accent);
   font-family: "IBM Plex Mono", monospace;
@@ -3791,7 +3791,7 @@ body {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: calc(25% + 0.22rem);
+  left: calc(12.5% + 0.22rem);
   width: 1px;
   background: var(--signal-line);
   content: "";
@@ -3799,7 +3799,7 @@ body {
 
 .field-timeline__track article {
   display: grid;
-  grid-template-columns: 25% 1rem minmax(0, 1fr);
+  grid-template-columns: 12.5% 1rem minmax(0, 1fr);
   gap: 1.5rem;
   min-height: 8.5rem;
   padding: 1.5rem 0;
