@@ -168,9 +168,12 @@ redirect_from:
       <h2 id="timeline-heading">Timeline</h2>
     </header>
     <div class="field-timeline__track">
-      <article><time datetime="2025-08">Aug 2025</time><span></span><div><p>Arizona State University</p><h3>Ph.D. in Computer Science</h3><p>Began graduate research in the Interactive Robotics Laboratory.</p></div></article>
-      <article><time datetime="2024-12">Dec 2024</time><span></span><div><p>University of Texas at Austin</p><h3>B.S. in Informatics</h3><p>Completed a specialization in Human-Centered Data Science.</p></div></article>
-      <article><time datetime="2023-01">Jan 2023</time><span></span><div><p>School of Information, UT Austin</p><h3>Undergraduate Research</h3><p>Began research in multimodal learning and human-AI interaction.</p></div></article>
+      <article><time datetime="2026-08">Aug 2026</time><span></span><div><p>Honda Dexterous Hand Project</p><h3>Learning from synchronized robot data</h3><p>Synchronized nine cameras with joint, force-control, and tactile observations.</p></div></article>
+      <article><time datetime="2026-01">Jan 2026</time><span></span><div><p>ComposeR + UR5 Golf</p><h3>Reward estimation and policy search</h3><p>Built VLM progress rewards and a UR5 putting pipeline with DMP-based global search.</p></div></article>
+      <article><time datetime="2025-08">Aug 2025</time><span></span><div><p>Interactive Robotics Laboratory, ASU</p><h3>Ph.D. + Graduate Research Assistant</h3><p>Researching language- and vision-conditioned manipulation, rewards, and adaptive behavior.</p></div></article>
+      <article><time datetime="2025-02">Feb 2025</time><span></span><div><p>IJCNLP-AACL 2025</p><h3>ReVision</h3><p>Co-developed a compact VLM and 39,000+ pairs for privacy-preserving instruction rewriting.</p></div></article>
+      <article><time datetime="2024-12">Dec 2024</time><span></span><div><p>University of Texas at Austin</p><h3>B.S. in Informatics</h3><p>Completed Human-Centered Data Science with a 3.94 GPA.</p></div></article>
+      <article><time datetime="2023-01">Jan 2023</time><span></span><div><p>School of Information, UT Austin</p><h3>Undergraduate Research Assistant</h3><p>Started multimodal learning research that developed into ReVision.</p></div></article>
     </div>
   </section>
 
