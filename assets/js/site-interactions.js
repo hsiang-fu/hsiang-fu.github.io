@@ -10,16 +10,38 @@
     return terminalLine("blank", "");
   }
 
-  var phdStartTime = new Date("2025-08-18T00:00:00-07:00").getTime();
+  var phoenixUtcOffset = 7 * 60 * 60 * 1000;
+  var phdStartCalendar = new Date(Date.UTC(2025, 7, 18, 0, 0, 0));
 
   function formatPhdUptime() {
-    var elapsedSeconds = Math.max(0, Math.floor((Date.now() - phdStartTime) / 1000));
+    var nowInPhoenix = new Date(Date.now() - phoenixUtcOffset);
+    if (nowInPhoenix < phdStartCalendar) return "00:00:00:00:00:00";
+
+    var cursor = new Date(phdStartCalendar.getTime());
+    var years = nowInPhoenix.getUTCFullYear() - cursor.getUTCFullYear();
+    cursor.setUTCFullYear(cursor.getUTCFullYear() + years);
+    if (cursor > nowInPhoenix) {
+      years -= 1;
+      cursor.setUTCFullYear(cursor.getUTCFullYear() - 1);
+    }
+
+    var months = (nowInPhoenix.getUTCFullYear() - cursor.getUTCFullYear()) * 12 +
+      nowInPhoenix.getUTCMonth() - cursor.getUTCMonth();
+    cursor.setUTCMonth(cursor.getUTCMonth() + months);
+    if (cursor > nowInPhoenix) {
+      months -= 1;
+      cursor.setUTCMonth(cursor.getUTCMonth() - 1);
+    }
+
+    var elapsedSeconds = Math.floor((nowInPhoenix - cursor) / 1000);
     var days = Math.floor(elapsedSeconds / 86400);
     var hours = Math.floor((elapsedSeconds % 86400) / 3600);
     var minutes = Math.floor((elapsedSeconds % 3600) / 60);
     var seconds = elapsedSeconds % 60;
 
-    return String(days).padStart(3, "0") + ":" +
+    return String(years).padStart(2, "0") + ":" +
+      String(months).padStart(2, "0") + ":" +
+      String(days).padStart(2, "0") + ":" +
       String(hours).padStart(2, "0") + ":" +
       String(minutes).padStart(2, "0") + ":" +
       String(seconds).padStart(2, "0");
