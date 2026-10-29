@@ -3314,7 +3314,8 @@ body {
   grid-row: 2;
   align-self: end;
   width: 100%;
-  margin: 0;
+  margin: 0 0 0.45rem;
+  isolation: isolate;
 }
 
 .field-console .signal-console__window {
@@ -3326,11 +3327,26 @@ body {
   padding: 1.45rem;
   overflow: hidden;
   border: 1px solid var(--signal-line);
-  border-radius: 2px;
-  background: color-mix(in srgb, var(--signal-surface) 93%, var(--signal-accent-2));
-  box-shadow: none;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--signal-surface-strong) 95%, var(--signal-accent));
+  box-shadow:
+    0 1px 0 color-mix(in srgb, var(--signal-text) 5%, transparent),
+    0 22px 52px color-mix(in srgb, var(--signal-text) 14%, transparent),
+    0 6px 18px color-mix(in srgb, var(--signal-accent) 8%, transparent);
   cursor: text;
-  transition: border-color 220ms ease, box-shadow 280ms cubic-bezier(0.22, 1, 0.36, 1), transform 220ms ease;
+  transform: translateY(-4px);
+  transition: border-color 220ms ease, box-shadow 280ms cubic-bezier(0.22, 1, 0.36, 1), transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.field-console .signal-console__window:hover,
+.field-console .signal-console__window.is-focused,
+.field-console .signal-console__window.is-interactive {
+  border-color: color-mix(in srgb, var(--signal-accent) 55%, var(--signal-line));
+  box-shadow:
+    0 1px 0 color-mix(in srgb, var(--signal-text) 5%, transparent),
+    0 30px 66px color-mix(in srgb, var(--signal-text) 18%, transparent),
+    0 8px 24px color-mix(in srgb, var(--signal-accent) 13%, transparent);
+  transform: translateY(-8px);
 }
 
 .field-console .signal-console__chrome {
