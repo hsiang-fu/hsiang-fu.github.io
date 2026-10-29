@@ -1115,9 +1115,9 @@ body.is-homepage-copy-protected {
   max-width: 13ch;
   margin: 0;
   color: var(--signal-text);
-  font-size: clamp(3.5rem, 8vw, 7.5rem);
+  font-size: clamp(2.8rem, 5.6vw, 5.25rem);
   font-weight: 500;
-  line-height: 0.9;
+  line-height: 0.94;
 }
 
 .detail-hero .page__title {
@@ -1914,7 +1914,10 @@ body.is-homepage-copy-protected {
     min-height: 5.5rem;
   }
 
-  .archive .page__title,
+  .archive .page__title {
+    font-size: clamp(2.6rem, 11vw, 4rem);
+  }
+
   .detail-hero .page__title {
     font-size: clamp(3rem, 14vw, 5.2rem);
   }
