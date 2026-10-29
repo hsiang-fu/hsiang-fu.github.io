@@ -12,8 +12,8 @@
               <a{% if page.url == '/' %} class="signal-nav-link is-active"{% else %} class="signal-nav-link"{% endif %} href="{{ base_path }}/#about"><span>01</span>About</a>
               <a{% if page.url == '/publications/' %} class="signal-nav-link is-active"{% else %} class="signal-nav-link"{% endif %} href="{{ base_path }}/publications/"><span>02</span>Publications</a>
               <a{% if page.url == '/projects/' %} class="signal-nav-link is-active"{% else %} class="signal-nav-link"{% endif %} href="{{ base_path }}/projects/"><span>03</span>Projects</a>
-              <a class="signal-nav-link" href="{{ base_path }}/#timeline"><span>04</span>Timeline</a>
-              <a class="signal-nav-link" href="{{ base_path }}/#contact"><span>05</span>Contact</a>
+              <a{% if page.url == '/research/' %} class="signal-nav-link is-active"{% else %} class="signal-nav-link"{% endif %} href="{{ base_path }}/research/"><span>04</span>Research</a>
+              <a{% if page.url == '/notes/' %} class="signal-nav-link is-active"{% else %} class="signal-nav-link"{% endif %} href="{{ base_path }}/notes/"><span>05</span>Notes</a>
               <a{% if page.url == '/resources/' %} class="signal-nav-link is-active"{% else %} class="signal-nav-link"{% endif %} href="{{ base_path }}/resources/"><span>06</span>Resources</a>
             </div>
           </li>
@@ -36,10 +36,11 @@
         <a href="{{ base_path }}/#about"><span>01</span><strong>About</strong><i aria-hidden="true">↗</i></a>
         <a href="{{ base_path }}/publications/"><span>02</span><strong>Publications</strong><i aria-hidden="true">↗</i></a>
         <a href="{{ base_path }}/projects/"><span>03</span><strong>Projects</strong><i aria-hidden="true">↗</i></a>
-        <a href="{{ base_path }}/#timeline"><span>04</span><strong>Timeline</strong><i aria-hidden="true">↗</i></a>
-        <a href="{{ base_path }}/#contact"><span>05</span><strong>Contact</strong><i aria-hidden="true">↗</i></a>
+        <a href="{{ base_path }}/research/"><span>04</span><strong>Research</strong><i aria-hidden="true">↗</i></a>
+        <a href="{{ base_path }}/notes/"><span>05</span><strong>Notes</strong><i aria-hidden="true">↗</i></a>
         <a href="{{ base_path }}/resources/"><span>06</span><strong>Resources</strong><i aria-hidden="true">↗</i></a>
         <a href="{{ base_path }}/cv/"><span>07</span><strong>CV</strong><i aria-hidden="true">↗</i></a>
+        <a href="{{ base_path }}/#contact"><span>08</span><strong>Contact</strong><i aria-hidden="true">↗</i></a>
       </div>
     </div>
   </div>

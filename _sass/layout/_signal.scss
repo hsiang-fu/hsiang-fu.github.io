@@ -989,6 +989,15 @@ body.is-homepage-copy-protected {
   padding-bottom: 5rem;
 }
 
+.signal-contact > .signal-section__header--simple {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+.signal-contact__intro {
+  grid-column: 2;
+}
+
 .signal-contact > div:nth-child(2) > p {
   max-width: 44rem;
   margin: 1.5rem 0 0;
@@ -1738,6 +1747,10 @@ body.is-homepage-copy-protected {
 
   .signal-contact {
     grid-template-columns: 1fr;
+  }
+
+  .signal-contact__intro {
+    grid-column: 1;
   }
 
   .signal-contact__links {

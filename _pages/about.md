@@ -121,9 +121,8 @@ redirect_from:
   </section>
 
   <section class="signal-section" id="timeline" aria-labelledby="timeline-heading">
-    <header class="signal-section__header">
-      <p><span>/04</span> Academic timeline</p>
-      <h2 id="timeline-heading">Research shaped by systems and people.</h2>
+    <header class="signal-section__header signal-section__header--simple">
+      <h2 id="timeline-heading"><span>/04</span> Timeline</h2>
     </header>
 
     <div class="signal-timeline">
@@ -134,9 +133,10 @@ redirect_from:
   </section>
 
   <section class="signal-contact" id="contact" aria-labelledby="contact-heading">
-    <p><span>/05</span> Contact</p>
-    <div>
-      <h2 id="contact-heading">Let's make robots work better in the real world.</h2>
+    <header class="signal-section__header signal-section__header--simple">
+      <h2 id="contact-heading"><span>/05</span> Contact</h2>
+    </header>
+    <div class="signal-contact__intro">
       <p>I'm interested in research conversations around robot learning, reward models, embodied agents, and human-centered AI.</p>
     </div>
     <div class="signal-contact__links">
