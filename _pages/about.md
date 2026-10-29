@@ -126,7 +126,7 @@ redirect_from:
     </div>
     <div class="field-work field-research__work" aria-labelledby="selected-work-heading">
       <div class="field-work__heading">
-        <p>Selected outcomes</p>
+        <p>Selected Publications &amp; Projects</p>
         <h3 id="selected-work-heading">Built to explain an idea, test a claim, or move a robot.</h3>
       </div>
       <div class="field-work__grid">
