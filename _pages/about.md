@@ -115,16 +115,15 @@ redirect_from:
       <p>02</p>
       <h2 id="research-heading">What&apos;s My Research About</h2>
     </header>
-    <div class="field-research__intro">
-      <p>Each thread approaches adaptation from a different layer of the system, from the signal used to evaluate behavior to the way people communicate intent.</p>
-      <a href="/research/">Open research page <span aria-hidden="true">&nearr;</span></a>
-    </div>
     <div class="field-research__list">
       <article><span>R.01</span><h3>In-Context Learning</h3><p>Use examples, instructions, and task context to adapt behavior without retraining from scratch.</p><i>Adapt</i></article>
       <article><span>R.02</span><h3>Reward Models</h3><p>Turn preferences, observations, and task outcomes into feedback a robot can act on.</p><i>Evaluate</i></article>
       <article><span>R.03</span><h3>Agentic AI</h3><p>Connect perception, memory, planning, and action across longer-horizon objectives.</p><i>Reason</i></article>
       <article><span>R.04</span><h3>Reinforcement Learning</h3><p>Improve policies through interaction while remaining useful under shifting constraints.</p><i>Improve</i></article>
       <article><span>R.05</span><h3>Human-Robot Collaboration</h3><p>Keep people, intent, and uncertainty visible inside the learning and decision loop.</p><i>Collaborate</i></article>
+    </div>
+    <div class="field-research__link">
+      <a href="/research/">Open research page <span aria-hidden="true">&nearr;</span></a>
     </div>
     <div class="field-work field-research__work" aria-label="Selected Publications and Projects">
       <div class="field-work__heading">

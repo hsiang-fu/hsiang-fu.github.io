@@ -3568,28 +3568,24 @@ body {
   font-size: 0.98rem;
 }
 
-.field-research__intro {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 1.5rem;
-  align-items: end;
-  padding: 2.2rem 0;
+.field-research__link {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.35rem 0 0;
 }
 
-.field-research__intro p {
-  grid-column: 2 / 8;
-  margin: 0;
-  line-height: 1.7;
-}
-
-.field-research__intro a {
-  grid-column: 9 / -1;
-  justify-self: end;
+.field-research__link a {
   color: var(--signal-accent);
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.66rem;
   text-decoration: none;
   text-transform: uppercase;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.field-research__link a:hover {
+  color: var(--signal-text);
+  transform: translateX(0.2rem);
 }
 
 .field-research__list {
@@ -4247,19 +4243,6 @@ body {
 
   .field-index dd {
     margin-top: 1rem;
-  }
-
-  .field-research__intro {
-    grid-template-columns: 1fr;
-  }
-
-  .field-research__intro p,
-  .field-research__intro a {
-    grid-column: 1;
-  }
-
-  .field-research__intro a {
-    justify-self: start;
   }
 
   .field-research__list article {
