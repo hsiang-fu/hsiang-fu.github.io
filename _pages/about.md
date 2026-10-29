@@ -130,21 +130,45 @@ redirect_from:
         <p>Selected Publications &amp; Projects</p>
       </div>
       <div class="field-work__grid">
+        <a class="field-work__feature" href="/portfolio/in-context-reinforcement-learning-state-machine-policies/">
+          <span class="field-work__index">W.01 / Aug 2026</span>
+          <div><p>Dexterous manipulation</p><h3>In-Context Reinforcement Learning for State Machine Policies</h3></div>
+          <p>Deployed in-context reinforcement learning onto the Honda Dexterous Hand at Honda Research Institute in San Jose.</p>
+          <span class="field-work__arrow" aria-hidden="true">&nearr;</span>
+        </a>
+        <a class="field-work__feature" href="/portfolio/composer-training-free-reward-estimation/">
+          <span class="field-work__index">W.02 / Jan 2026</span>
+          <div><p>Training-free reward estimation</p><h3>ComposeR: Training-Free Reward Estimation for Robot Manipulation</h3></div>
+          <p>Dense, interpretable progress rewards from robot trajectory video using VLM evidence, verification, and temporal checks.</p>
+          <span class="field-work__arrow" aria-hidden="true">&nearr;</span>
+        </a>
+        <a class="field-work__feature" href="/portfolio/ur5-golf-in-context-policy-search/">
+          <span class="field-work__index">W.03 / Jan 2026</span>
+          <div><p>Robot putting</p><h3>UR5 Golf: In-Context Policy Search for Robot Putting</h3></div>
+          <p>A physical rollout and camera-feedback pipeline with Dynamic Movement Primitive fitting and global trajectory search.</p>
+          <span class="field-work__arrow" aria-hidden="true">&nearr;</span>
+        </a>
         <a class="field-work__feature" href="/publication/2025-02-20-revision">
-          <span class="field-work__index">W.01 / Publication</span>
+          <span class="field-work__index">W.04 / Nov 2025</span>
           <div><p>Privacy-preserving multimodal AI</p><h3>ReVision</h3></div>
           <p>A compact vision-language model and 39,000-example dataset for rewriting visual instructions without sending the image to a conversational system.</p>
           <span class="field-work__arrow" aria-hidden="true">&nearr;</span>
         </a>
+        <a class="field-work__feature" href="/portfolio/bimanual-manipulation-demonstration-guided-policy-search/">
+          <span class="field-work__index">W.05 / Aug 2025</span>
+          <div><p>Demonstration-guided search</p><h3>Bimanual Manipulation with Demonstration-Guided Policy Search</h3></div>
+          <p>Parameterized 3-D wrist trajectories with LLM-generated DMP proposals and iterative policy optimization in simulation.</p>
+          <span class="field-work__arrow" aria-hidden="true">&nearr;</span>
+        </a>
         <a class="field-work__feature" href="/portfolio/portfolio-1/">
-          <span class="field-work__index">W.02 / Learning resource</span>
+          <span class="field-work__index">W.06 / Aug 2025</span>
           <div><p>Examples as the interface</p><h3>Introduction to In-Context Learning</h3></div>
           <p>Interactive demonstrations across language, computer vision, regression, and reinforcement learning, designed to make ICL tangible.</p>
           <span class="field-work__arrow" aria-hidden="true">&nearr;</span>
         </a>
       </div>
       <div class="field-work__footer">
-        <p>Current work also includes dexterous manipulation, training-free reward estimation, UR5 putting, and demonstration-guided bimanual policy search.</p>
+        <p>Selected research spanning adaptive policies, robot reward estimation, embodied learning, and privacy-preserving multimodal AI.</p>
         <a class="field-button" href="/projects/">All projects <span aria-hidden="true">&nearr;</span></a>
       </div>
     </div>

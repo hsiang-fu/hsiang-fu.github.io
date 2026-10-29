@@ -1949,6 +1949,14 @@ body.is-homepage-copy-protected {
   line-height: 1.82;
 }
 
+.page--portfolio .page__content {
+  padding-top: clamp(2.5rem, 4vw, 3.75rem);
+}
+
+.page--portfolio .page__content > h2:first-child {
+  margin-top: 0;
+}
+
 .page--detail .page__content > p:first-child {
   margin-top: 0;
   color: var(--signal-text);
@@ -4021,7 +4029,7 @@ body {
 .field-work__feature {
   position: relative;
   display: grid;
-  min-height: 22rem;
+  min-height: 20rem;
   align-content: space-between;
   padding: 2.2rem;
   border-right: 1px solid var(--signal-line);
@@ -4030,8 +4038,12 @@ body {
   transition: background-color 250ms ease;
 }
 
-.field-work__feature:last-child {
+.field-work__feature:nth-child(even) {
   border-right: 0;
+}
+
+.field-work__feature:nth-child(n + 3) {
+  border-top: 1px solid var(--signal-line);
 }
 
 .field-work__feature:hover {
@@ -4050,7 +4062,7 @@ body {
   max-width: 18ch;
   margin: 0;
   color: var(--signal-text);
-  font-size: 3.2rem;
+  font-size: clamp(1.9rem, 2.5vw, 2.65rem);
   font-weight: 500;
   line-height: 0.98;
 }
@@ -4733,6 +4745,10 @@ body {
     min-height: 3.6rem;
     border-right: 0;
     border-bottom: 1px solid var(--signal-line);
+  }
+
+  .field-work__feature:nth-child(n + 2) {
+    border-top: 0;
   }
 
   .field-principles span:last-child {
