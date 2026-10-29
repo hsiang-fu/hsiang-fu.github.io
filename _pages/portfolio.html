@@ -7,10 +7,25 @@ author_profile: false
 
 {% include base_path %}
 
-<div class="archive-intro">
-  <p>Applied systems, robotics experiments, and machine learning projects shaped around real constraints and useful interaction loops.</p>
-</div>
+<div class="archive-index-layout">
+  <nav class="archive-local-nav" aria-label="Projects on this page">
+    <p>On this page</p>
+    <ol>
+      {% for post in site.portfolio %}
+        {% assign post_anchor = post.title | slugify %}
+        <li><a href="#{{ post_anchor }}"><span>{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>{{ post.title }}</a></li>
+      {% endfor %}
+    </ol>
+  </nav>
 
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
+  <div class="archive-index-content">
+    <div class="archive-intro">
+      <p>Applied systems, robotics experiments, and machine learning projects shaped around real constraints and useful interaction loops.</p>
+    </div>
+
+    {% for post in site.portfolio %}
+      {% assign post_anchor = post.title | slugify %}
+      {% include archive-single.html anchor_id=post_anchor %}
+    {% endfor %}
+  </div>
+</div>

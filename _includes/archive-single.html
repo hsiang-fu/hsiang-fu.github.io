@@ -13,7 +13,7 @@
 {% endif %}
 
 <div class="{{ include.type | default: "list" }}__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+  <article{% if include.anchor_id %} id="{{ include.anchor_id }}"{% endif %} class="archive__item{% if post.collection == 'publications' or post.collection == 'portfolio' %} archive__item--showcase archive__item--{{ post.collection }}{% endif %}" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
         <img src="{% if teaser contains '://' %}{{ teaser }}{% else %}{{ teaser | prepend: '/images/' | prepend: base_path }}{% endif %}" alt="">
@@ -48,7 +48,14 @@
       </div>
     {% endif %}
 
-    {% if post.citation and post.paperurl and post.slidesurl and post.bibtexurl %}
+    {% if post.collection == 'publications' or post.collection == 'portfolio' %}
+      <p class="archive__item-actions">
+        {% if post.paperurl %}<a href="{{ post.paperurl }}">Download paper</a>{% endif %}
+        {% if post.slidesurl %}<a href="{{ post.slidesurl }}">Slides</a>{% endif %}
+        {% if post.bibtexurl %}<a href="{{ post.bibtexurl }}">BibTeX</a>{% endif %}
+        <a href="{{ base_path }}{{ post.url }}" rel="permalink">Details</a>
+      </p>
+    {% elsif post.citation and post.paperurl and post.slidesurl and post.bibtexurl %}
       <p class="archive__item-actions"><a href="{{ post.paperurl }}">Paper</a><a href="{{ post.slidesurl }}">Slides</a><a href="{{ post.bibtexurl }}">BibTeX</a></p>
     {% elsif post.citation and post.paperurl and post.slidesurl %}
       <p class="archive__item-actions"><a href="{{ post.paperurl }}">Paper</a><a href="{{ post.slidesurl }}">Slides</a></p>

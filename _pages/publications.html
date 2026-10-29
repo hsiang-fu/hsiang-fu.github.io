@@ -5,33 +5,47 @@ permalink: /publications/
 author_profile: false
 ---
 
-{% if site.author.googlescholar %}
-  <div class="archive-intro">
-    <p>Selected research outputs and writing across robot learning, embodied intelligence, and human-centered machine learning.</p>
-    <a href="https://scholar.google.com/citations?user=R7oQL2UAAAAJ&hl=en">Google Scholar</a>
-  </div>
-{% endif %}
-
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+<div class="archive-index-layout">
+  <nav class="archive-local-nav" aria-label="Publications on this page">
+    <p>On this page</p>
+    <ol>
+      {% for post in site.publications reversed %}
+        {% assign post_anchor = post.title | slugify %}
+        <li><a href="#{{ post_anchor }}"><span>{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>{{ post.title }}</a></li>
+      {% endfor %}
+    </ol>
+  </nav>
 
+  <div class="archive-index-content">
+    {% if site.author.googlescholar %}
+      <div class="archive-intro">
+        <p>Selected research outputs and writing across robot learning, embodied intelligence, and human-centered machine learning.</p>
+        <a href="https://scholar.google.com/citations?user=R7oQL2UAAAAJ&hl=en">Google Scholar</a>
+      </div>
+    {% endif %}
+
+    {% if site.publication_category %}
+      {% for category in site.publication_category  %}
+        {% assign title_shown = false %}
+        {% for post in site.publications reversed %}
+          {% if post.category != category[0] %}
+            {% continue %}
+          {% endif %}
+          {% unless title_shown %}
+            <h2>{{ category[1].title }}</h2><hr />
+            {% assign title_shown = true %}
+          {% endunless %}
+          {% assign post_anchor = post.title | slugify %}
+          {% include archive-single.html anchor_id=post_anchor %}
+        {% endfor %}
+      {% endfor %}
+    {% else %}
+      {% for post in site.publications reversed %}
+        {% assign post_anchor = post.title | slugify %}
+        {% include archive-single.html anchor_id=post_anchor %}
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
