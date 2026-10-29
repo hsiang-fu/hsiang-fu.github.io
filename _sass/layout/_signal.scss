@@ -3987,11 +3987,11 @@ body {
   }
 
   .field-hero__intro {
-    grid-column: 1 / 5;
+    grid-column: 1 / 6;
   }
 
   .field-console {
-    grid-column: 5 / -1;
+    grid-column: 6 / -1;
   }
 
   .field-section__heading h2 {
@@ -4000,6 +4000,90 @@ body {
 
   .field-contact h2 {
     font-size: 4.4rem;
+  }
+}
+
+@media (min-width: 901px) {
+  .field-hero {
+    box-sizing: border-box;
+    height: calc(100svh - 72px);
+    min-height: 0;
+    padding: 0.85rem 0 1rem;
+    overflow: clip;
+  }
+
+  .field-status {
+    min-height: 2.3rem;
+  }
+
+  .field-hero__canvas {
+    height: calc(100% - 2.3rem);
+    min-height: 0;
+    grid-template-rows: minmax(0, 1fr) clamp(12.5rem, 28vh, 16.5rem);
+    gap: clamp(0.75rem, 1.8vh, 1.15rem) clamp(1.5rem, 2.7vw, 2.8rem);
+    padding-top: clamp(0.65rem, 1.5vh, 1rem);
+  }
+
+  .field-hero__copy {
+    padding: 0.4rem 0;
+  }
+
+  .field-hero h1 {
+    max-width: 16ch;
+    margin-top: clamp(0.65rem, 1.5vh, 1rem);
+    font-size: clamp(3.7rem, min(6.3vw, 8.7vh), 5.35rem);
+  }
+
+  .field-hero__legend > p {
+    margin: 0.75rem 0 clamp(0.8rem, 2vh, 1.4rem);
+  }
+
+  .field-hero__legend li {
+    padding: clamp(0.45rem, 1.2vh, 0.7rem) 0;
+  }
+
+  .field-hero__intro {
+    padding-top: clamp(0.65rem, 1.4vh, 1rem);
+  }
+
+  .field-hero__intro > p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .field-hero__actions {
+    margin-top: clamp(0.65rem, 1.4vh, 1rem);
+  }
+
+  .field-button {
+    min-height: 2.6rem;
+  }
+
+  .field-hero__facts {
+    margin-top: clamp(0.65rem, 1.4vh, 1rem);
+  }
+
+  .field-hero__facts div {
+    padding-top: 0.55rem;
+  }
+
+  .field-console {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    align-self: stretch;
+    margin-bottom: 0.25rem;
+  }
+
+  .field-console .signal-console__topline {
+    flex: 0 0 auto;
+  }
+
+  .field-console .signal-console__window {
+    flex: 1 1 auto;
+    min-height: 0;
+    height: auto;
+    padding: clamp(1rem, 2.2vh, 1.35rem);
   }
 }
 
