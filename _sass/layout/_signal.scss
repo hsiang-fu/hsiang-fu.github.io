@@ -4324,13 +4324,18 @@ body {
 }
 
 .detail-hero .page__title {
+  grid-column: 2 / -1;
   max-width: 26ch;
+}
+
+.detail-kicker {
+  grid-column: 1 / 2;
 }
 
 .detail-hero .detail-meta,
 .detail-hero .page__date,
 .detail-primary-action {
-  grid-column: 4 / 10;
+  grid-column: 2 / 10;
 }
 
 .archive-intro {
@@ -4679,6 +4684,11 @@ body {
 @media (max-width: 680px) {
   .field-home {
     width: calc(100% - 1.25rem);
+  }
+
+  .detail-hero .page__title {
+    font-size: clamp(2rem, 9.5vw, 2.5rem);
+    line-height: 1.02;
   }
 
   .field-status {

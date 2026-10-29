@@ -5,6 +5,26 @@ collection: portfolio
 project_rank: 5
 project_period: "Aug 2025 - Present"
 ---
-In-Context Learning (ICL) is a recent paradigm in the field of machine learning which uses Large Language Models (LLMs) for learning and inference. It was first identified in the paper Large Language Models are Few Shot Learners (Brown et al., 2020). ICL enables LLMs to adjust to new tasks without changing any of their internal weights. Instead of retraining or fine-tuning the LLM, we simply provide instructions and examples directly as part of the prompt context. In turn, the LLM processes these demonstrations, detects the underlying patterns, and applies the identified pattern structure to new input queries. ICL requires no explicit training phase, which allows for incremental and online learning. In addition, the LLM may provide human-readable explanations in natural language which justify its generated output. Most importantly, ICL allows for additional domain information to be provided at inference time as inductive bias. For example, when making predictions about the weather, the model may be provided semantic descriptions of the provided features or may be provided prior information about the specific region that is under investigation. More generally the use of ICL enables a single neural network model to seamlessly shift between tasks, e.g., classification, translation, summarization, or reasoning, based solely on the current context. In this website, we introduce the core ideas behind in-context learning and provide a variety of hands-on examples in regression, reinforcement learning, pattern recognition, and translation. All examples are implemented as Google Colab tutorials and can be run using the free Gemini version.
 
-Access the <a href="https://intro-to-icl.github.io/">website and demos</a> here. 
+## Overview
+
+Introduction to In-Context Learning is an educational website that makes ICL concrete through explanations and interactive demonstrations. It shows how a model can infer a task from instructions, examples, and domain context without updating its internal weights.
+
+The project connects the core idea introduced by *Large Language Models are Few-Shot Learners* (Brown et al., 2020) to examples across language, computer vision, and robotics.
+
+## What the Project Covers
+
+- Learning task structure directly from demonstrations in a prompt
+- Applying one model across sequence prediction, regression, and classification
+- Using context as an inductive bias without retraining or fine-tuning
+- Extending in-context adaptation to reinforcement learning and robotics
+
+## Interactive Demos
+
+The site includes hands-on Google Colab tutorials for regression, reinforcement learning, pattern recognition, and translation. The examples are designed to run with the free version of Gemini, making the material accessible without specialized hardware or a local training setup.
+
+## Reach
+
+The project reached **5,000+ views in its first six months**, helping students and practitioners explore ICL through runnable examples rather than definitions alone.
+
+<p class="detail-actions"><a href="https://intro-to-icl.github.io/" target="_blank" rel="noreferrer">Explore the interactive website <span aria-hidden="true">&nearr;</span></a></p>
