@@ -1480,6 +1480,11 @@ body.is-homepage-copy-protected {
 
 /* Cursor */
 
+body.has-signal-cursor.cursor-terminal,
+body.has-signal-cursor.cursor-terminal * {
+  cursor: none !important;
+}
+
 @media (pointer: fine) and (prefers-reduced-motion: no-preference) {
   body.has-signal-cursor,
   body.has-signal-cursor a,
@@ -1544,34 +1549,13 @@ body.is-homepage-copy-protected {
   }
 
   body.has-signal-cursor.cursor-terminal .signal-cursor-ring {
-    width: 3px;
-    height: 28px;
+    width: 2px;
+    height: 26px;
     border: 0;
-    border-radius: 2px;
+    border-radius: 999px;
     opacity: 1;
     background: var(--signal-accent);
-    box-shadow: 0 0 0 1px var(--signal-accent-soft), 0 0 14px color-mix(in srgb, var(--signal-accent) 72%, transparent);
-  }
-
-  body.has-signal-cursor.cursor-terminal .signal-cursor-ring::before,
-  body.has-signal-cursor.cursor-terminal .signal-cursor-ring::after {
-    position: absolute;
-    left: 50%;
-    width: 13px;
-    height: 2px;
-    border-radius: 2px;
-    background: var(--signal-accent);
-    box-shadow: 0 0 8px color-mix(in srgb, var(--signal-accent) 65%, transparent);
-    content: "";
-    transform: translateX(-50%);
-  }
-
-  body.has-signal-cursor.cursor-terminal .signal-cursor-ring::before {
-    top: -1px;
-  }
-
-  body.has-signal-cursor.cursor-terminal .signal-cursor-ring::after {
-    bottom: -1px;
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--signal-accent) 16%, transparent), 0 0 10px color-mix(in srgb, var(--signal-accent) 55%, transparent);
   }
 
   body.has-signal-cursor.cursor-pressed .signal-cursor-ring {
