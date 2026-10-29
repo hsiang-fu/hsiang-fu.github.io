@@ -102,9 +102,8 @@ redirect_from:
   </section>
 
   <section class="signal-section" id="news" aria-labelledby="news-heading">
-    <header class="signal-section__header">
-      <p><span>/03</span> News + highlights</p>
-      <h2 id="news-heading">Recent signals from the work.</h2>
+    <header class="signal-section__header signal-section__header--simple">
+      <h2 id="news-heading"><span>/03</span> News + Highlights</h2>
     </header>
 
     <div class="signal-news">

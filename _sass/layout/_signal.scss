@@ -691,6 +691,23 @@ a {
   line-height: 1.7;
 }
 
+.signal-section__header--simple {
+  display: block;
+}
+
+.signal-section__header--simple h2 {
+  max-width: none;
+}
+
+.signal-section__header--simple h2 span {
+  margin-right: 0.8rem;
+  color: var(--signal-accent);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.2em;
+  font-weight: 500;
+  vertical-align: middle;
+}
+
 .signal-about__grid {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(20rem, 0.66fr);
