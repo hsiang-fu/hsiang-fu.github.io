@@ -48,13 +48,13 @@
   }
 
   function terminalUptimeLine() {
-    var line = terminalLine("out", "  Uptime:    " + formatPhdUptime() + " (PhD in Progress)");
+    var line = terminalLine("out", "  Uptime:    " + formatPhdUptime() + " (YY:MM:DD:HH:MM:SS)");
     line.liveUptime = true;
     return line;
   }
 
   function updatePhdUptimeElements() {
-    var content = "  Uptime:    " + formatPhdUptime() + " (PhD in Progress)";
+    var content = "  Uptime:    " + formatPhdUptime() + " (YY:MM:DD:HH:MM:SS)";
     document.querySelectorAll("[data-live-uptime]").forEach(function (element) {
       element.textContent = content;
     });
@@ -174,6 +174,7 @@
         terminalLine("out", "  WM         Embodied AI + HRI"),
         terminalLine("out", "  CPU        Milk-Tea-powered  @  ∞ MHz"),
         terminalUptimeLine(),
+        terminalLine("out", "  State:     PhD in Progress"),
         terminalLine("out", "  Memory     Context · Feedback · Humans"),
         terminalLine("link", "  GitHub     github.com/hsiang-fu", "https://github.com/hsiang-fu", true),
         terminalLine("link", "  Scholar    research profile", "https://scholar.google.com/citations?user=R7oQL2UAAAAJ&hl=en", true),
