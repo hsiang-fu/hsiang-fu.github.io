@@ -165,13 +165,12 @@ redirect_from:
 
   <section class="field-section field-timeline" id="timeline" aria-labelledby="timeline-heading">
     <header class="field-section__heading">
-      <p>04</p>
       <h2 id="timeline-heading">Timeline</h2>
     </header>
     <div class="field-timeline__track">
-      <article><time>2025 &mdash; Present</time><span></span><div><p>Arizona State University</p><h3>Ph.D. in Computer Science</h3><p>Graduate research in the Interactive Robotics Laboratory.</p></div></article>
-      <article><time>2024</time><span></span><div><p>University of Texas at Austin</p><h3>B.S. in Informatics</h3><p>Human-Centered Data Science, machine learning, and human-AI interaction.</p></div></article>
-      <article><time>2021 &mdash; 2024</time><span></span><div><p>Applied systems</p><h3>Industry + project experience</h3><p>Cybersecurity, analytics, automation, product testing, and data pipelines.</p></div></article>
+      <article><time datetime="2025-08">Aug 2025</time><span></span><div><p>Arizona State University</p><h3>Ph.D. in Computer Science</h3><p>Began graduate research in the Interactive Robotics Laboratory.</p></div></article>
+      <article><time datetime="2024-12">Dec 2024</time><span></span><div><p>University of Texas at Austin</p><h3>B.S. in Informatics</h3><p>Completed a specialization in Human-Centered Data Science.</p></div></article>
+      <article><time datetime="2023-01">Jan 2023</time><span></span><div><p>School of Information, UT Austin</p><h3>Undergraduate Research</h3><p>Began research in multimodal learning and human-AI interaction.</p></div></article>
     </div>
   </section>
 
