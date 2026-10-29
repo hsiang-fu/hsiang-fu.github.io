@@ -92,20 +92,22 @@ redirect_from:
       <h2 id="about-heading">About Me</h2>
     </header>
     <div class="field-about__body">
-      <div class="field-about__copy">
-        <p>My research combines robot learning, in-context adaptation, reward models, reinforcement learning, and human-centered design. I am interested in systems that use demonstrations and multimodal feedback to improve without forgetting the person or environment they are meant to serve.</p>
-        <p>Before ASU, I studied Human-Centered Data Science at the University of Texas at Austin. That background still shapes the questions I ask: not only whether a system works, but what it understands, how it adapts, and who it works for.</p>
+      <div class="field-about__content">
+        <div class="field-about__copy">
+          <p>My research combines robot learning, in-context adaptation, reward models, reinforcement learning, and human-centered design. I am interested in systems that use demonstrations and multimodal feedback to improve without forgetting the person or environment they are meant to serve.</p>
+          <p>Before ASU, I studied Human-Centered Data Science at the University of Texas at Austin. That background still shapes the questions I ask: not only whether a system works, but what it understands, how it adapts, and who it works for.</p>
+        </div>
+        <dl class="field-index" aria-label="Academic profile">
+          <div><dt>Role / 01</dt><dd>Computer Science Ph.D. Student</dd></div>
+          <div><dt>Lab / 02</dt><dd>Interactive Robotics Laboratory @ ASU</dd></div>
+          <div><dt>Methods / 03</dt><dd>Robotics, ICL, reward models, agentic AI, reinforcement learning</dd></div>
+        </dl>
       </div>
       <figure class="field-about__portrait">
         <img src="/images/sean-desert.jpg" alt="Hsiang Fu standing in a bright desert landscape" loading="lazy">
         <figcaption><span>Phoenix, Arizona</span><span>ASU / CS Ph.D.</span></figcaption>
       </figure>
     </div>
-    <dl class="field-index" aria-label="Academic profile">
-      <div><dt>Role / 01</dt><dd>Computer Science Ph.D. Student</dd></div>
-      <div><dt>Lab / 02</dt><dd>Interactive Robotics Laboratory @ ASU</dd></div>
-      <div><dt>Methods / 03</dt><dd>Robotics, ICL, reward models, agentic AI, reinforcement learning</dd></div>
-    </dl>
   </section>
 
   <section class="field-section field-research" id="research" aria-labelledby="research-heading">

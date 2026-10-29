@@ -3419,10 +3419,17 @@ body {
 
 .field-about__body {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.58fr);
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.5fr);
   gap: clamp(2rem, 4vw, 4.5rem);
   align-items: start;
-  padding: 4rem 0 5rem;
+  padding: 3rem 0 4rem;
+}
+
+.field-about__content {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
 .field-about__copy {
@@ -3448,7 +3455,7 @@ body {
 
 .field-about__portrait img {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: 50% 68%;
   filter: saturate(0.9) contrast(0.98);
@@ -3463,6 +3470,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
   min-height: 2.7rem;
   padding: 0.65rem 0.8rem;
   border-top: 1px solid var(--signal-line);
@@ -3470,6 +3478,11 @@ body {
   font-family: "IBM Plex Mono", monospace;
   font-size: 0.61rem;
   text-transform: uppercase;
+}
+
+.field-about__portrait figcaption span:last-child {
+  margin-left: auto;
+  text-align: right;
 }
 
 .field-index {
@@ -3503,6 +3516,30 @@ body {
   color: var(--signal-text);
   font-size: 1.15rem;
   line-height: 1.35;
+}
+
+.field-about__content .field-index {
+  grid-template-columns: 1fr;
+}
+
+.field-about__content .field-index div {
+  display: grid;
+  grid-template-columns: minmax(7rem, 0.34fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  min-height: 0;
+  padding: 1.1rem 0;
+  border-right: 0;
+  border-bottom: 1px solid var(--signal-line);
+}
+
+.field-about__content .field-index div:last-child {
+  border-bottom: 0;
+}
+
+.field-about__content .field-index dd {
+  max-width: none;
+  margin: 0;
+  font-size: 0.98rem;
 }
 
 .field-research__intro {
